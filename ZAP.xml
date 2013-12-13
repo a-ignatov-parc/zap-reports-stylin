@@ -1,0 +1,3443 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<?xml-stylesheet href="ZAP.xsl" type="text/xsl" ?>
+<alerts type="list">
+	<alert type="set">
+		<other/>
+		<param>no-store, no-cache</param>
+		<alert>Incomplete or no cache-control and pragma HTTPHeader set</alert>
+		<evidence/>
+		<reliability>Warning</reliability>
+		<solution>Whenever possible ensure the cache-control HTTPHeader is set with no-cache, no-store, must-revalidate, private, and the pragma HTTPHeader is set with no-cache.</solution>
+		<url>http://site.com/</url>
+		<reference>https://www.owasp.org/index.php/Session_Management_Cheat_Sheet#Web_Content_Caching</reference>
+		<id>0</id>
+		<risk>Low</risk>
+		<description>The cache-control and pragma HTTPHeader have not been set properly allowing the browser and proxies to cache content</description>
+		<attack/>
+		<messageId>3</messageId>
+		<cweid>0</cweid>
+		<wascid>0</wascid>
+	</alert>
+	<alert type="set">
+		<other/>
+		<param/>
+		<alert>X-Content-Type-Options header missing</alert>
+		<evidence/>
+		<reliability>Warning</reliability>
+		<solution>This check is specific to Internet Explorer 8 and Google Chrome. Ensure each page sets a Content-Type header and the X-CONTENT-TYPE-OPTIONS if the Content-Type header is unknown</solution>
+		<url>http://site.com/</url>
+		<reference/>
+		<id>1</id>
+		<risk>Low</risk>
+		<description>The Anti-MIME-Sniffing header X-Content-Type-Options was not set to 'nosniff'</description>
+		<attack/>
+		<messageId>3</messageId>
+		<cweid>0</cweid>
+		<wascid>0</wascid>
+	</alert>
+	<alert type="set">
+		<other/>
+		<param/>
+		<alert>X-Frame-Options header not set</alert>
+		<evidence/>
+		<reliability>Warning</reliability>
+		<solution>Most modern Web browsers support the X-Frame-Options HTTP header, ensure it's set on all web pages returned by your site (if you expect the page to be framed only by pages on your server (e.g. it's part of a FRAMESET) then you'll want to use SAMEORIGIN,
+			otherwise if you never expect the page to be framed, you should use DENY).</solution>
+		<url>http://site.com/</url>
+		<reference>http://blogs.msdn.com/b/ieinternals/archive/2010/03/30/combating-clickjacking-with-x-frame-options.aspx?Redirected=true</reference>
+		<id>2</id>
+		<risk>Informational</risk>
+		<description>X-Frame-Options header is not included in the HTTP response to protect against 'ClickJacking' attacks</description>
+		<attack/>
+		<messageId>3</messageId>
+		<cweid>0</cweid>
+		<wascid>0</wascid>
+	</alert>
+	<alert type="set">
+		<other/>
+		<param/>
+		<alert>X-Content-Type-Options header missing</alert>
+		<evidence/>
+		<reliability>Warning</reliability>
+		<solution>This check is specific to Internet Explorer 8 and Google Chrome. Ensure each page sets a Content-Type header and the X-CONTENT-TYPE-OPTIONS if the Content-Type header is unknown</solution>
+		<url>http://site.com</url>
+		<reference/>
+		<id>3</id>
+		<risk>Low</risk>
+		<description>The Anti-MIME-Sniffing header X-Content-Type-Options was not set to 'nosniff'</description>
+		<attack/>
+		<messageId>5</messageId>
+		<cweid>0</cweid>
+		<wascid>0</wascid>
+	</alert>
+	<alert type="set">
+		<other/>
+		<param/>
+		<alert>X-Frame-Options header not set</alert>
+		<evidence/>
+		<reliability>Warning</reliability>
+		<solution>Most modern Web browsers support the X-Frame-Options HTTP header, ensure it's set on all web pages returned by your site (if you expect the page to be framed only by pages on your server (e.g. it's part of a FRAMESET) then you'll want to use SAMEORIGIN,
+			otherwise if you never expect the page to be framed, you should use DENY).</solution>
+		<url>http://site.com</url>
+		<reference>http://blogs.msdn.com/b/ieinternals/archive/2010/03/30/combating-clickjacking-with-x-frame-options.aspx?Redirected=true</reference>
+		<id>4</id>
+		<risk>Informational</risk>
+		<description>X-Frame-Options header is not included in the HTTP response to protect against 'ClickJacking' attacks</description>
+		<attack/>
+		<messageId>5</messageId>
+		<cweid>0</cweid>
+		<wascid>0</wascid>
+	</alert>
+	<alert type="set">
+		<other/>
+		<param/>
+		<alert>X-Content-Type-Options header missing</alert>
+		<evidence/>
+		<reliability>Warning</reliability>
+		<solution>This check is specific to Internet Explorer 8 and Google Chrome. Ensure each page sets a Content-Type header and the X-CONTENT-TYPE-OPTIONS if the Content-Type header is unknown</solution>
+		<url>http://site.com</url>
+		<reference/>
+		<id>5</id>
+		<risk>Low</risk>
+		<description>The Anti-MIME-Sniffing header X-Content-Type-Options was not set to 'nosniff'</description>
+		<attack/>
+		<messageId>6</messageId>
+		<cweid>0</cweid>
+		<wascid>0</wascid>
+	</alert>
+	<alert type="set">
+		<other/>
+		<param/>
+		<alert>X-Frame-Options header not set</alert>
+		<evidence/>
+		<reliability>Warning</reliability>
+		<solution>Most modern Web browsers support the X-Frame-Options HTTP header, ensure it's set on all web pages returned by your site (if you expect the page to be framed only by pages on your server (e.g. it's part of a FRAMESET) then you'll want to use SAMEORIGIN,
+			otherwise if you never expect the page to be framed, you should use DENY).</solution>
+		<url>http://site.com</url>
+		<reference>http://blogs.msdn.com/b/ieinternals/archive/2010/03/30/combating-clickjacking-with-x-frame-options.aspx?Redirected=true</reference>
+		<id>6</id>
+		<risk>Informational</risk>
+		<description>X-Frame-Options header is not included in the HTTP response to protect against 'ClickJacking' attacks</description>
+		<attack/>
+		<messageId>6</messageId>
+		<cweid>0</cweid>
+		<wascid>0</wascid>
+	</alert>
+	<alert type="set">
+		<other/>
+		<param/>
+		<alert>X-Content-Type-Options header missing</alert>
+		<evidence/>
+		<reliability>Warning</reliability>
+		<solution>This check is specific to Internet Explorer 8 and Google Chrome. Ensure each page sets a Content-Type header and the X-CONTENT-TYPE-OPTIONS if the Content-Type header is unknown</solution>
+		<url>http://site.com</url>
+		<reference/>
+		<id>7</id>
+		<risk>Low</risk>
+		<description>The Anti-MIME-Sniffing header X-Content-Type-Options was not set to 'nosniff'</description>
+		<attack/>
+		<messageId>18</messageId>
+		<cweid>0</cweid>
+		<wascid>0</wascid>
+	</alert>
+	<alert type="set">
+		<other/>
+		<param/>
+		<alert>X-Frame-Options header not set</alert>
+		<evidence/>
+		<reliability>Warning</reliability>
+		<solution>Most modern Web browsers support the X-Frame-Options HTTP header, ensure it's set on all web pages returned by your site (if you expect the page to be framed only by pages on your server (e.g. it's part of a FRAMESET) then you'll want to use SAMEORIGIN,
+			otherwise if you never expect the page to be framed, you should use DENY).</solution>
+		<url>http://site.com</url>
+		<reference>http://blogs.msdn.com/b/ieinternals/archive/2010/03/30/combating-clickjacking-with-x-frame-options.aspx?Redirected=true</reference>
+		<id>8</id>
+		<risk>Informational</risk>
+		<description>X-Frame-Options header is not included in the HTTP response to protect against 'ClickJacking' attacks</description>
+		<attack/>
+		<messageId>18</messageId>
+		<cweid>0</cweid>
+		<wascid>0</wascid>
+	</alert>
+	<alert type="set">
+		<other/>
+		<param/>
+		<alert>X-Content-Type-Options header missing</alert>
+		<evidence/>
+		<reliability>Warning</reliability>
+		<solution>This check is specific to Internet Explorer 8 and Google Chrome. Ensure each page sets a Content-Type header and the X-CONTENT-TYPE-OPTIONS if the Content-Type header is unknown</solution>
+		<url>http://site.com</url>
+		<reference/>
+		<id>9</id>
+		<risk>Low</risk>
+		<description>The Anti-MIME-Sniffing header X-Content-Type-Options was not set to 'nosniff'</description>
+		<attack/>
+		<messageId>28</messageId>
+		<cweid>0</cweid>
+		<wascid>0</wascid>
+	</alert>
+	<alert type="set">
+		<other/>
+		<param/>
+		<alert>X-Frame-Options header not set</alert>
+		<evidence/>
+		<reliability>Warning</reliability>
+		<solution>Most modern Web browsers support the X-Frame-Options HTTP header, ensure it's set on all web pages returned by your site (if you expect the page to be framed only by pages on your server (e.g. it's part of a FRAMESET) then you'll want to use SAMEORIGIN,
+			otherwise if you never expect the page to be framed, you should use DENY).</solution>
+		<url>http://site.com</url>
+		<reference>http://blogs.msdn.com/b/ieinternals/archive/2010/03/30/combating-clickjacking-with-x-frame-options.aspx?Redirected=true</reference>
+		<id>10</id>
+		<risk>Informational</risk>
+		<description>X-Frame-Options header is not included in the HTTP response to protect against 'ClickJacking' attacks</description>
+		<attack/>
+		<messageId>28</messageId>
+		<cweid>0</cweid>
+		<wascid>0</wascid>
+	</alert>
+	<alert type="set">
+		<other/>
+		<param>max-age</param>
+		<alert>Incomplete or no cache-control and pragma HTTPHeader set</alert>
+		<evidence/>
+		<reliability>Warning</reliability>
+		<solution>Whenever possible ensure the cache-control HTTPHeader is set with no-cache, no-store, must-revalidate, private, and the pragma HTTPHeader is set with no-cache.</solution>
+		<url>http://site.com</url>
+		<reference>https://www.owasp.org/index.php/Session_Management_Cheat_Sheet#Web_Content_Caching</reference>
+		<id>11</id>
+		<risk>Low</risk>
+		<description>The cache-control and pragma HTTPHeader have not been set properly allowing the browser and proxies to cache content</description>
+		<attack>315360000</attack>
+		<messageId>32</messageId>
+		<cweid>0</cweid>
+		<wascid>0</wascid>
+	</alert>
+	<alert type="set">
+		<other/>
+		<param>public</param>
+		<alert>Incomplete or no cache-control and pragma HTTPHeader set</alert>
+		<evidence/>
+		<reliability>Warning</reliability>
+		<solution>Whenever possible ensure the cache-control HTTPHeader is set with no-cache, no-store, must-revalidate, private, and the pragma HTTPHeader is set with no-cache.</solution>
+		<url>http://site.com</url>
+		<reference>https://www.owasp.org/index.php/Session_Management_Cheat_Sheet#Web_Content_Caching</reference>
+		<id>12</id>
+		<risk>Low</risk>
+		<description>The cache-control and pragma HTTPHeader have not been set properly allowing the browser and proxies to cache content</description>
+		<attack/>
+		<messageId>32</messageId>
+		<cweid>0</cweid>
+		<wascid>0</wascid>
+	</alert>
+	<alert type="set">
+		<other/>
+		<param/>
+		<alert>X-Content-Type-Options header missing</alert>
+		<evidence/>
+		<reliability>Warning</reliability>
+		<solution>This check is specific to Internet Explorer 8 and Google Chrome. Ensure each page sets a Content-Type header and the X-CONTENT-TYPE-OPTIONS if the Content-Type header is unknown</solution>
+		<url>http://site.com</url>
+		<reference/>
+		<id>14</id>
+		<risk>Low</risk>
+		<description>The Anti-MIME-Sniffing header X-Content-Type-Options was not set to 'nosniff'</description>
+		<attack/>
+		<messageId>32</messageId>
+		<cweid>0</cweid>
+		<wascid>0</wascid>
+	</alert>
+	<alert type="set">
+		<other/>
+		<param/>
+		<alert>X-Frame-Options header not set</alert>
+		<evidence/>
+		<reliability>Warning</reliability>
+		<solution>Most modern Web browsers support the X-Frame-Options HTTP header, ensure it's set on all web pages returned by your site (if you expect the page to be framed only by pages on your server (e.g. it's part of a FRAMESET) then you'll want to use SAMEORIGIN,
+			otherwise if you never expect the page to be framed, you should use DENY).</solution>
+		<url>http://site.com</url>
+		<reference>http://blogs.msdn.com/b/ieinternals/archive/2010/03/30/combating-clickjacking-with-x-frame-options.aspx?Redirected=true</reference>
+		<id>15</id>
+		<risk>Informational</risk>
+		<description>X-Frame-Options header is not included in the HTTP response to protect against 'ClickJacking' attacks</description>
+		<attack/>
+		<messageId>32</messageId>
+		<cweid>0</cweid>
+		<wascid>0</wascid>
+	</alert>
+	<alert type="set">
+		<other/>
+		<param>max-age</param>
+		<alert>Incomplete or no cache-control and pragma HTTPHeader set</alert>
+		<evidence/>
+		<reliability>Warning</reliability>
+		<solution>Whenever possible ensure the cache-control HTTPHeader is set with no-cache, no-store, must-revalidate, private, and the pragma HTTPHeader is set with no-cache.</solution>
+		<url>http://site.com</url>
+		<reference>https://www.owasp.org/index.php/Session_Management_Cheat_Sheet#Web_Content_Caching</reference>
+		<id>16</id>
+		<risk>Low</risk>
+		<description>The cache-control and pragma HTTPHeader have not been set properly allowing the browser and proxies to cache content</description>
+		<attack>315360000</attack>
+		<messageId>33</messageId>
+		<cweid>0</cweid>
+		<wascid>0</wascid>
+	</alert>
+	<alert type="set">
+		<other/>
+		<param>public</param>
+		<alert>Incomplete or no cache-control and pragma HTTPHeader set</alert>
+		<evidence/>
+		<reliability>Warning</reliability>
+		<solution>Whenever possible ensure the cache-control HTTPHeader is set with no-cache, no-store, must-revalidate, private, and the pragma HTTPHeader is set with no-cache.</solution>
+		<url>http://site.com</url>
+		<reference>https://www.owasp.org/index.php/Session_Management_Cheat_Sheet#Web_Content_Caching</reference>
+		<id>17</id>
+		<risk>Low</risk>
+		<description>The cache-control and pragma HTTPHeader have not been set properly allowing the browser and proxies to cache content</description>
+		<attack/>
+		<messageId>33</messageId>
+		<cweid>0</cweid>
+		<wascid>0</wascid>
+	</alert>
+	<alert type="set">
+		<other/>
+		<param/>
+		<alert>X-Content-Type-Options header missing</alert>
+		<evidence/>
+		<reliability>Warning</reliability>
+		<solution>This check is specific to Internet Explorer 8 and Google Chrome. Ensure each page sets a Content-Type header and the X-CONTENT-TYPE-OPTIONS if the Content-Type header is unknown</solution>
+		<url>http://site.com</url>
+		<reference/>
+		<id>19</id>
+		<risk>Low</risk>
+		<description>The Anti-MIME-Sniffing header X-Content-Type-Options was not set to 'nosniff'</description>
+		<attack/>
+		<messageId>33</messageId>
+		<cweid>0</cweid>
+		<wascid>0</wascid>
+	</alert>
+	<alert type="set">
+		<other/>
+		<param/>
+		<alert>X-Frame-Options header not set</alert>
+		<evidence/>
+		<reliability>Warning</reliability>
+		<solution>Most modern Web browsers support the X-Frame-Options HTTP header, ensure it's set on all web pages returned by your site (if you expect the page to be framed only by pages on your server (e.g. it's part of a FRAMESET) then you'll want to use SAMEORIGIN,
+			otherwise if you never expect the page to be framed, you should use DENY).</solution>
+		<url>http://site.com</url>
+		<reference>http://blogs.msdn.com/b/ieinternals/archive/2010/03/30/combating-clickjacking-with-x-frame-options.aspx?Redirected=true</reference>
+		<id>20</id>
+		<risk>Informational</risk>
+		<description>X-Frame-Options header is not included in the HTTP response to protect against 'ClickJacking' attacks</description>
+		<attack/>
+		<messageId>33</messageId>
+		<cweid>0</cweid>
+		<wascid>0</wascid>
+	</alert>
+	<alert type="set">
+		<other/>
+		<param>max-age</param>
+		<alert>Incomplete or no cache-control and pragma HTTPHeader set</alert>
+		<evidence/>
+		<reliability>Warning</reliability>
+		<solution>Whenever possible ensure the cache-control HTTPHeader is set with no-cache, no-store, must-revalidate, private, and the pragma HTTPHeader is set with no-cache.</solution>
+		<url>http://site.com</url>
+		<reference>https://www.owasp.org/index.php/Session_Management_Cheat_Sheet#Web_Content_Caching</reference>
+		<id>21</id>
+		<risk>Low</risk>
+		<description>The cache-control and pragma HTTPHeader have not been set properly allowing the browser and proxies to cache content</description>
+		<attack>315360000</attack>
+		<messageId>34</messageId>
+		<cweid>0</cweid>
+		<wascid>0</wascid>
+	</alert>
+	<alert type="set">
+		<other/>
+		<param>public</param>
+		<alert>Incomplete or no cache-control and pragma HTTPHeader set</alert>
+		<evidence/>
+		<reliability>Warning</reliability>
+		<solution>Whenever possible ensure the cache-control HTTPHeader is set with no-cache, no-store, must-revalidate, private, and the pragma HTTPHeader is set with no-cache.</solution>
+		<url>http://site.com</url>
+		<reference>https://www.owasp.org/index.php/Session_Management_Cheat_Sheet#Web_Content_Caching</reference>
+		<id>22</id>
+		<risk>Low</risk>
+		<description>The cache-control and pragma HTTPHeader have not been set properly allowing the browser and proxies to cache content</description>
+		<attack/>
+		<messageId>34</messageId>
+		<cweid>0</cweid>
+		<wascid>0</wascid>
+	</alert>
+	<alert type="set">
+		<other/>
+		<param/>
+		<alert>X-Content-Type-Options header missing</alert>
+		<evidence/>
+		<reliability>Warning</reliability>
+		<solution>This check is specific to Internet Explorer 8 and Google Chrome. Ensure each page sets a Content-Type header and the X-CONTENT-TYPE-OPTIONS if the Content-Type header is unknown</solution>
+		<url>http://site.com</url>
+		<reference/>
+		<id>24</id>
+		<risk>Low</risk>
+		<description>The Anti-MIME-Sniffing header X-Content-Type-Options was not set to 'nosniff'</description>
+		<attack/>
+		<messageId>34</messageId>
+		<cweid>0</cweid>
+		<wascid>0</wascid>
+	</alert>
+	<alert type="set">
+		<other/>
+		<param/>
+		<alert>X-Frame-Options header not set</alert>
+		<evidence/>
+		<reliability>Warning</reliability>
+		<solution>Most modern Web browsers support the X-Frame-Options HTTP header, ensure it's set on all web pages returned by your site (if you expect the page to be framed only by pages on your server (e.g. it's part of a FRAMESET) then you'll want to use SAMEORIGIN,
+			otherwise if you never expect the page to be framed, you should use DENY).</solution>
+		<url>http://site.com</url>
+		<reference>http://blogs.msdn.com/b/ieinternals/archive/2010/03/30/combating-clickjacking-with-x-frame-options.aspx?Redirected=true</reference>
+		<id>25</id>
+		<risk>Informational</risk>
+		<description>X-Frame-Options header is not included in the HTTP response to protect against 'ClickJacking' attacks</description>
+		<attack/>
+		<messageId>34</messageId>
+		<cweid>0</cweid>
+		<wascid>0</wascid>
+	</alert>
+	<alert type="set">
+		<other/>
+		<param>max-age</param>
+		<alert>Incomplete or no cache-control and pragma HTTPHeader set</alert>
+		<evidence/>
+		<reliability>Warning</reliability>
+		<solution>Whenever possible ensure the cache-control HTTPHeader is set with no-cache, no-store, must-revalidate, private, and the pragma HTTPHeader is set with no-cache.</solution>
+		<url>http://site.com</url>
+		<reference>https://www.owasp.org/index.php/Session_Management_Cheat_Sheet#Web_Content_Caching</reference>
+		<id>26</id>
+		<risk>Low</risk>
+		<description>The cache-control and pragma HTTPHeader have not been set properly allowing the browser and proxies to cache content</description>
+		<attack>315360000</attack>
+		<messageId>36</messageId>
+		<cweid>0</cweid>
+		<wascid>0</wascid>
+	</alert>
+	<alert type="set">
+		<other/>
+		<param>public</param>
+		<alert>Incomplete or no cache-control and pragma HTTPHeader set</alert>
+		<evidence/>
+		<reliability>Warning</reliability>
+		<solution>Whenever possible ensure the cache-control HTTPHeader is set with no-cache, no-store, must-revalidate, private, and the pragma HTTPHeader is set with no-cache.</solution>
+		<url>http://site.com</url>
+		<reference>https://www.owasp.org/index.php/Session_Management_Cheat_Sheet#Web_Content_Caching</reference>
+		<id>27</id>
+		<risk>Low</risk>
+		<description>The cache-control and pragma HTTPHeader have not been set properly allowing the browser and proxies to cache content</description>
+		<attack/>
+		<messageId>36</messageId>
+		<cweid>0</cweid>
+		<wascid>0</wascid>
+	</alert>
+	<alert type="set">
+		<other/>
+		<param/>
+		<alert>X-Content-Type-Options header missing</alert>
+		<evidence/>
+		<reliability>Warning</reliability>
+		<solution>This check is specific to Internet Explorer 8 and Google Chrome. Ensure each page sets a Content-Type header and the X-CONTENT-TYPE-OPTIONS if the Content-Type header is unknown</solution>
+		<url>http://site.com</url>
+		<reference/>
+		<id>29</id>
+		<risk>Low</risk>
+		<description>The Anti-MIME-Sniffing header X-Content-Type-Options was not set to 'nosniff'</description>
+		<attack/>
+		<messageId>36</messageId>
+		<cweid>0</cweid>
+		<wascid>0</wascid>
+	</alert>
+	<alert type="set">
+		<other/>
+		<param/>
+		<alert>X-Frame-Options header not set</alert>
+		<evidence/>
+		<reliability>Warning</reliability>
+		<solution>Most modern Web browsers support the X-Frame-Options HTTP header, ensure it's set on all web pages returned by your site (if you expect the page to be framed only by pages on your server (e.g. it's part of a FRAMESET) then you'll want to use SAMEORIGIN,
+			otherwise if you never expect the page to be framed, you should use DENY).</solution>
+		<url>http://site.com</url>
+		<reference>http://blogs.msdn.com/b/ieinternals/archive/2010/03/30/combating-clickjacking-with-x-frame-options.aspx?Redirected=true</reference>
+		<id>30</id>
+		<risk>Informational</risk>
+		<description>X-Frame-Options header is not included in the HTTP response to protect against 'ClickJacking' attacks</description>
+		<attack/>
+		<messageId>36</messageId>
+		<cweid>0</cweid>
+		<wascid>0</wascid>
+	</alert>
+	<alert type="set">
+		<other/>
+		<param>private, max-age</param>
+		<alert>Incomplete or no cache-control and pragma HTTPHeader set</alert>
+		<evidence/>
+		<reliability>Warning</reliability>
+		<solution>Whenever possible ensure the cache-control HTTPHeader is set with no-cache, no-store, must-revalidate, private, and the pragma HTTPHeader is set with no-cache.</solution>
+		<url>https://fonts.googleapis.com/css?family=PT+Serif:400,700&amp;subset=latin,cyrillic</url>
+		<reference>https://www.owasp.org/index.php/Session_Management_Cheat_Sheet#Web_Content_Caching</reference>
+		<id>31</id>
+		<risk>Low</risk>
+		<description>The cache-control and pragma HTTPHeader have not been set properly allowing the browser and proxies to cache content</description>
+		<attack>86400</attack>
+		<messageId>37</messageId>
+		<cweid>0</cweid>
+		<wascid>0</wascid>
+	</alert>
+	<alert type="set">
+		<other/>
+		<param>max-age</param>
+		<alert>Incomplete or no cache-control and pragma HTTPHeader set</alert>
+		<evidence/>
+		<reliability>Warning</reliability>
+		<solution>Whenever possible ensure the cache-control HTTPHeader is set with no-cache, no-store, must-revalidate, private, and the pragma HTTPHeader is set with no-cache.</solution>
+		<url>http://site.com</url>
+		<reference>https://www.owasp.org/index.php/Session_Management_Cheat_Sheet#Web_Content_Caching</reference>
+		<id>32</id>
+		<risk>Low</risk>
+		<description>The cache-control and pragma HTTPHeader have not been set properly allowing the browser and proxies to cache content</description>
+		<attack>315360000</attack>
+		<messageId>38</messageId>
+		<cweid>0</cweid>
+		<wascid>0</wascid>
+	</alert>
+	<alert type="set">
+		<other/>
+		<param>public</param>
+		<alert>Incomplete or no cache-control and pragma HTTPHeader set</alert>
+		<evidence/>
+		<reliability>Warning</reliability>
+		<solution>Whenever possible ensure the cache-control HTTPHeader is set with no-cache, no-store, must-revalidate, private, and the pragma HTTPHeader is set with no-cache.</solution>
+		<url>http://site.com</url>
+		<reference>https://www.owasp.org/index.php/Session_Management_Cheat_Sheet#Web_Content_Caching</reference>
+		<id>33</id>
+		<risk>Low</risk>
+		<description>The cache-control and pragma HTTPHeader have not been set properly allowing the browser and proxies to cache content</description>
+		<attack/>
+		<messageId>38</messageId>
+		<cweid>0</cweid>
+		<wascid>0</wascid>
+	</alert>
+	<alert type="set">
+		<other/>
+		<param/>
+		<alert>X-Content-Type-Options header missing</alert>
+		<evidence/>
+		<reliability>Warning</reliability>
+		<solution>This check is specific to Internet Explorer 8 and Google Chrome. Ensure each page sets a Content-Type header and the X-CONTENT-TYPE-OPTIONS if the Content-Type header is unknown</solution>
+		<url>http://site.com</url>
+		<reference/>
+		<id>35</id>
+		<risk>Low</risk>
+		<description>The Anti-MIME-Sniffing header X-Content-Type-Options was not set to 'nosniff'</description>
+		<attack/>
+		<messageId>38</messageId>
+		<cweid>0</cweid>
+		<wascid>0</wascid>
+	</alert>
+	<alert type="set">
+		<other/>
+		<param/>
+		<alert>X-Frame-Options header not set</alert>
+		<evidence/>
+		<reliability>Warning</reliability>
+		<solution>Most modern Web browsers support the X-Frame-Options HTTP header, ensure it's set on all web pages returned by your site (if you expect the page to be framed only by pages on your server (e.g. it's part of a FRAMESET) then you'll want to use SAMEORIGIN,
+			otherwise if you never expect the page to be framed, you should use DENY).</solution>
+		<url>http://site.com</url>
+		<reference>http://blogs.msdn.com/b/ieinternals/archive/2010/03/30/combating-clickjacking-with-x-frame-options.aspx?Redirected=true</reference>
+		<id>36</id>
+		<risk>Informational</risk>
+		<description>X-Frame-Options header is not included in the HTTP response to protect against 'ClickJacking' attacks</description>
+		<attack/>
+		<messageId>38</messageId>
+		<cweid>0</cweid>
+		<wascid>0</wascid>
+	</alert>
+	<alert type="set">
+		<other/>
+		<param>max-age</param>
+		<alert>Incomplete or no cache-control and pragma HTTPHeader set</alert>
+		<evidence/>
+		<reliability>Warning</reliability>
+		<solution>Whenever possible ensure the cache-control HTTPHeader is set with no-cache, no-store, must-revalidate, private, and the pragma HTTPHeader is set with no-cache.</solution>
+		<url>http://site.com</url>
+		<reference>https://www.owasp.org/index.php/Session_Management_Cheat_Sheet#Web_Content_Caching</reference>
+		<id>37</id>
+		<risk>Low</risk>
+		<description>The cache-control and pragma HTTPHeader have not been set properly allowing the browser and proxies to cache content</description>
+		<attack>315360000</attack>
+		<messageId>39</messageId>
+		<cweid>0</cweid>
+		<wascid>0</wascid>
+	</alert>
+	<alert type="set">
+		<other/>
+		<param>public</param>
+		<alert>Incomplete or no cache-control and pragma HTTPHeader set</alert>
+		<evidence/>
+		<reliability>Warning</reliability>
+		<solution>Whenever possible ensure the cache-control HTTPHeader is set with no-cache, no-store, must-revalidate, private, and the pragma HTTPHeader is set with no-cache.</solution>
+		<url>http://site.com</url>
+		<reference>https://www.owasp.org/index.php/Session_Management_Cheat_Sheet#Web_Content_Caching</reference>
+		<id>38</id>
+		<risk>Low</risk>
+		<description>The cache-control and pragma HTTPHeader have not been set properly allowing the browser and proxies to cache content</description>
+		<attack/>
+		<messageId>39</messageId>
+		<cweid>0</cweid>
+		<wascid>0</wascid>
+	</alert>
+	<alert type="set">
+		<other/>
+		<param/>
+		<alert>X-Content-Type-Options header missing</alert>
+		<evidence/>
+		<reliability>Warning</reliability>
+		<solution>This check is specific to Internet Explorer 8 and Google Chrome. Ensure each page sets a Content-Type header and the X-CONTENT-TYPE-OPTIONS if the Content-Type header is unknown</solution>
+		<url>http://site.com</url>
+		<reference/>
+		<id>40</id>
+		<risk>Low</risk>
+		<description>The Anti-MIME-Sniffing header X-Content-Type-Options was not set to 'nosniff'</description>
+		<attack/>
+		<messageId>39</messageId>
+		<cweid>0</cweid>
+		<wascid>0</wascid>
+	</alert>
+	<alert type="set">
+		<other/>
+		<param/>
+		<alert>X-Frame-Options header not set</alert>
+		<evidence/>
+		<reliability>Warning</reliability>
+		<solution>Most modern Web browsers support the X-Frame-Options HTTP header, ensure it's set on all web pages returned by your site (if you expect the page to be framed only by pages on your server (e.g. it's part of a FRAMESET) then you'll want to use SAMEORIGIN,
+			otherwise if you never expect the page to be framed, you should use DENY).</solution>
+		<url>http://site.com</url>
+		<reference>http://blogs.msdn.com/b/ieinternals/archive/2010/03/30/combating-clickjacking-with-x-frame-options.aspx?Redirected=true</reference>
+		<id>41</id>
+		<risk>Informational</risk>
+		<description>X-Frame-Options header is not included in the HTTP response to protect against 'ClickJacking' attacks</description>
+		<attack/>
+		<messageId>39</messageId>
+		<cweid>0</cweid>
+		<wascid>0</wascid>
+	</alert>
+	<alert type="set">
+		<other/>
+		<param>max-age</param>
+		<alert>Incomplete or no cache-control and pragma HTTPHeader set</alert>
+		<evidence/>
+		<reliability>Warning</reliability>
+		<solution>Whenever possible ensure the cache-control HTTPHeader is set with no-cache, no-store, must-revalidate, private, and the pragma HTTPHeader is set with no-cache.</solution>
+		<url>http://site.com</url>
+		<reference>https://www.owasp.org/index.php/Session_Management_Cheat_Sheet#Web_Content_Caching</reference>
+		<id>42</id>
+		<risk>Low</risk>
+		<description>The cache-control and pragma HTTPHeader have not been set properly allowing the browser and proxies to cache content</description>
+		<attack>315360000</attack>
+		<messageId>40</messageId>
+		<cweid>0</cweid>
+		<wascid>0</wascid>
+	</alert>
+	<alert type="set">
+		<other/>
+		<param>public</param>
+		<alert>Incomplete or no cache-control and pragma HTTPHeader set</alert>
+		<evidence/>
+		<reliability>Warning</reliability>
+		<solution>Whenever possible ensure the cache-control HTTPHeader is set with no-cache, no-store, must-revalidate, private, and the pragma HTTPHeader is set with no-cache.</solution>
+		<url>http://site.com</url>
+		<reference>https://www.owasp.org/index.php/Session_Management_Cheat_Sheet#Web_Content_Caching</reference>
+		<id>43</id>
+		<risk>Low</risk>
+		<description>The cache-control and pragma HTTPHeader have not been set properly allowing the browser and proxies to cache content</description>
+		<attack/>
+		<messageId>40</messageId>
+		<cweid>0</cweid>
+		<wascid>0</wascid>
+	</alert>
+	<alert type="set">
+		<other/>
+		<param/>
+		<alert>X-Content-Type-Options header missing</alert>
+		<evidence/>
+		<reliability>Warning</reliability>
+		<solution>This check is specific to Internet Explorer 8 and Google Chrome. Ensure each page sets a Content-Type header and the X-CONTENT-TYPE-OPTIONS if the Content-Type header is unknown</solution>
+		<url>http://site.com</url>
+		<reference/>
+		<id>45</id>
+		<risk>Low</risk>
+		<description>The Anti-MIME-Sniffing header X-Content-Type-Options was not set to 'nosniff'</description>
+		<attack/>
+		<messageId>40</messageId>
+		<cweid>0</cweid>
+		<wascid>0</wascid>
+	</alert>
+	<alert type="set">
+		<other/>
+		<param/>
+		<alert>X-Frame-Options header not set</alert>
+		<evidence/>
+		<reliability>Warning</reliability>
+		<solution>Most modern Web browsers support the X-Frame-Options HTTP header, ensure it's set on all web pages returned by your site (if you expect the page to be framed only by pages on your server (e.g. it's part of a FRAMESET) then you'll want to use SAMEORIGIN,
+			otherwise if you never expect the page to be framed, you should use DENY).</solution>
+		<url>http://site.com</url>
+		<reference>http://blogs.msdn.com/b/ieinternals/archive/2010/03/30/combating-clickjacking-with-x-frame-options.aspx?Redirected=true</reference>
+		<id>46</id>
+		<risk>Informational</risk>
+		<description>X-Frame-Options header is not included in the HTTP response to protect against 'ClickJacking' attacks</description>
+		<attack/>
+		<messageId>40</messageId>
+		<cweid>0</cweid>
+		<wascid>0</wascid>
+	</alert>
+	<alert type="set">
+		<other/>
+		<param>private, max-age</param>
+		<alert>Incomplete or no cache-control and pragma HTTPHeader set</alert>
+		<evidence/>
+		<reliability>Warning</reliability>
+		<solution>Whenever possible ensure the cache-control HTTPHeader is set with no-cache, no-store, must-revalidate, private, and the pragma HTTPHeader is set with no-cache.</solution>
+		<url>https://fonts.googleapis.com/css?family=PT+Sans:400,700,400italic,700italic%7CPhilosopher:400,700&amp;subset=latin,cyrillic,latin,cyrillic</url>
+		<reference>https://www.owasp.org/index.php/Session_Management_Cheat_Sheet#Web_Content_Caching</reference>
+		<id>47</id>
+		<risk>Low</risk>
+		<description>The cache-control and pragma HTTPHeader have not been set properly allowing the browser and proxies to cache content</description>
+		<attack>86400</attack>
+		<messageId>41</messageId>
+		<cweid>0</cweid>
+		<wascid>0</wascid>
+	</alert>
+	<alert type="set">
+		<other/>
+		<param>max-age</param>
+		<alert>Incomplete or no cache-control and pragma HTTPHeader set</alert>
+		<evidence/>
+		<reliability>Warning</reliability>
+		<solution>Whenever possible ensure the cache-control HTTPHeader is set with no-cache, no-store, must-revalidate, private, and the pragma HTTPHeader is set with no-cache.</solution>
+		<url>http://site.com</url>
+		<reference>https://www.owasp.org/index.php/Session_Management_Cheat_Sheet#Web_Content_Caching</reference>
+		<id>48</id>
+		<risk>Low</risk>
+		<description>The cache-control and pragma HTTPHeader have not been set properly allowing the browser and proxies to cache content</description>
+		<attack>315360000</attack>
+		<messageId>42</messageId>
+		<cweid>0</cweid>
+		<wascid>0</wascid>
+	</alert>
+	<alert type="set">
+		<other/>
+		<param>public</param>
+		<alert>Incomplete or no cache-control and pragma HTTPHeader set</alert>
+		<evidence/>
+		<reliability>Warning</reliability>
+		<solution>Whenever possible ensure the cache-control HTTPHeader is set with no-cache, no-store, must-revalidate, private, and the pragma HTTPHeader is set with no-cache.</solution>
+		<url>http://site.com</url>
+		<reference>https://www.owasp.org/index.php/Session_Management_Cheat_Sheet#Web_Content_Caching</reference>
+		<id>49</id>
+		<risk>Low</risk>
+		<description>The cache-control and pragma HTTPHeader have not been set properly allowing the browser and proxies to cache content</description>
+		<attack/>
+		<messageId>42</messageId>
+		<cweid>0</cweid>
+		<wascid>0</wascid>
+	</alert>
+	<alert type="set">
+		<other/>
+		<param/>
+		<alert>X-Content-Type-Options header missing</alert>
+		<evidence/>
+		<reliability>Warning</reliability>
+		<solution>This check is specific to Internet Explorer 8 and Google Chrome. Ensure each page sets a Content-Type header and the X-CONTENT-TYPE-OPTIONS if the Content-Type header is unknown</solution>
+		<url>http://site.com</url>
+		<reference/>
+		<id>51</id>
+		<risk>Low</risk>
+		<description>The Anti-MIME-Sniffing header X-Content-Type-Options was not set to 'nosniff'</description>
+		<attack/>
+		<messageId>42</messageId>
+		<cweid>0</cweid>
+		<wascid>0</wascid>
+	</alert>
+	<alert type="set">
+		<other/>
+		<param/>
+		<alert>X-Frame-Options header not set</alert>
+		<evidence/>
+		<reliability>Warning</reliability>
+		<solution>Most modern Web browsers support the X-Frame-Options HTTP header, ensure it's set on all web pages returned by your site (if you expect the page to be framed only by pages on your server (e.g. it's part of a FRAMESET) then you'll want to use SAMEORIGIN,
+			otherwise if you never expect the page to be framed, you should use DENY).</solution>
+		<url>http://site.com</url>
+		<reference>http://blogs.msdn.com/b/ieinternals/archive/2010/03/30/combating-clickjacking-with-x-frame-options.aspx?Redirected=true</reference>
+		<id>52</id>
+		<risk>Informational</risk>
+		<description>X-Frame-Options header is not included in the HTTP response to protect against 'ClickJacking' attacks</description>
+		<attack/>
+		<messageId>42</messageId>
+		<cweid>0</cweid>
+		<wascid>0</wascid>
+	</alert>
+	<alert type="set">
+		<other/>
+		<param>max-age</param>
+		<alert>Incomplete or no cache-control and pragma HTTPHeader set</alert>
+		<evidence/>
+		<reliability>Warning</reliability>
+		<solution>Whenever possible ensure the cache-control HTTPHeader is set with no-cache, no-store, must-revalidate, private, and the pragma HTTPHeader is set with no-cache.</solution>
+		<url>http://site.com</url>
+		<reference>https://www.owasp.org/index.php/Session_Management_Cheat_Sheet#Web_Content_Caching</reference>
+		<id>53</id>
+		<risk>Low</risk>
+		<description>The cache-control and pragma HTTPHeader have not been set properly allowing the browser and proxies to cache content</description>
+		<attack>315360000</attack>
+		<messageId>44</messageId>
+		<cweid>0</cweid>
+		<wascid>0</wascid>
+	</alert>
+	<alert type="set">
+		<other/>
+		<param>public</param>
+		<alert>Incomplete or no cache-control and pragma HTTPHeader set</alert>
+		<evidence/>
+		<reliability>Warning</reliability>
+		<solution>Whenever possible ensure the cache-control HTTPHeader is set with no-cache, no-store, must-revalidate, private, and the pragma HTTPHeader is set with no-cache.</solution>
+		<url>http://site.com</url>
+		<reference>https://www.owasp.org/index.php/Session_Management_Cheat_Sheet#Web_Content_Caching</reference>
+		<id>54</id>
+		<risk>Low</risk>
+		<description>The cache-control and pragma HTTPHeader have not been set properly allowing the browser and proxies to cache content</description>
+		<attack/>
+		<messageId>44</messageId>
+		<cweid>0</cweid>
+		<wascid>0</wascid>
+	</alert>
+	<alert type="set">
+		<other/>
+		<param/>
+		<alert>X-Content-Type-Options header missing</alert>
+		<evidence/>
+		<reliability>Warning</reliability>
+		<solution>This check is specific to Internet Explorer 8 and Google Chrome. Ensure each page sets a Content-Type header and the X-CONTENT-TYPE-OPTIONS if the Content-Type header is unknown</solution>
+		<url>http://site.com</url>
+		<reference/>
+		<id>56</id>
+		<risk>Low</risk>
+		<description>The Anti-MIME-Sniffing header X-Content-Type-Options was not set to 'nosniff'</description>
+		<attack/>
+		<messageId>44</messageId>
+		<cweid>0</cweid>
+		<wascid>0</wascid>
+	</alert>
+	<alert type="set">
+		<other/>
+		<param/>
+		<alert>X-Frame-Options header not set</alert>
+		<evidence/>
+		<reliability>Warning</reliability>
+		<solution>Most modern Web browsers support the X-Frame-Options HTTP header, ensure it's set on all web pages returned by your site (if you expect the page to be framed only by pages on your server (e.g. it's part of a FRAMESET) then you'll want to use SAMEORIGIN,
+			otherwise if you never expect the page to be framed, you should use DENY).</solution>
+		<url>http://site.com</url>
+		<reference>http://blogs.msdn.com/b/ieinternals/archive/2010/03/30/combating-clickjacking-with-x-frame-options.aspx?Redirected=true</reference>
+		<id>57</id>
+		<risk>Informational</risk>
+		<description>X-Frame-Options header is not included in the HTTP response to protect against 'ClickJacking' attacks</description>
+		<attack/>
+		<messageId>44</messageId>
+		<cweid>0</cweid>
+		<wascid>0</wascid>
+	</alert>
+	<alert type="set">
+		<other/>
+		<param>max-age</param>
+		<alert>Incomplete or no cache-control and pragma HTTPHeader set</alert>
+		<evidence/>
+		<reliability>Warning</reliability>
+		<solution>Whenever possible ensure the cache-control HTTPHeader is set with no-cache, no-store, must-revalidate, private, and the pragma HTTPHeader is set with no-cache.</solution>
+		<url>http://site.com</url>
+		<reference>https://www.owasp.org/index.php/Session_Management_Cheat_Sheet#Web_Content_Caching</reference>
+		<id>58</id>
+		<risk>Low</risk>
+		<description>The cache-control and pragma HTTPHeader have not been set properly allowing the browser and proxies to cache content</description>
+		<attack>315360000</attack>
+		<messageId>45</messageId>
+		<cweid>0</cweid>
+		<wascid>0</wascid>
+	</alert>
+	<alert type="set">
+		<other/>
+		<param>public</param>
+		<alert>Incomplete or no cache-control and pragma HTTPHeader set</alert>
+		<evidence/>
+		<reliability>Warning</reliability>
+		<solution>Whenever possible ensure the cache-control HTTPHeader is set with no-cache, no-store, must-revalidate, private, and the pragma HTTPHeader is set with no-cache.</solution>
+		<url>http://site.com</url>
+		<reference>https://www.owasp.org/index.php/Session_Management_Cheat_Sheet#Web_Content_Caching</reference>
+		<id>59</id>
+		<risk>Low</risk>
+		<description>The cache-control and pragma HTTPHeader have not been set properly allowing the browser and proxies to cache content</description>
+		<attack/>
+		<messageId>45</messageId>
+		<cweid>0</cweid>
+		<wascid>0</wascid>
+	</alert>
+	<alert type="set">
+		<other/>
+		<param/>
+		<alert>X-Content-Type-Options header missing</alert>
+		<evidence/>
+		<reliability>Warning</reliability>
+		<solution>This check is specific to Internet Explorer 8 and Google Chrome. Ensure each page sets a Content-Type header and the X-CONTENT-TYPE-OPTIONS if the Content-Type header is unknown</solution>
+		<url>http://site.com</url>
+		<reference/>
+		<id>61</id>
+		<risk>Low</risk>
+		<description>The Anti-MIME-Sniffing header X-Content-Type-Options was not set to 'nosniff'</description>
+		<attack/>
+		<messageId>45</messageId>
+		<cweid>0</cweid>
+		<wascid>0</wascid>
+	</alert>
+	<alert type="set">
+		<other/>
+		<param/>
+		<alert>X-Frame-Options header not set</alert>
+		<evidence/>
+		<reliability>Warning</reliability>
+		<solution>Most modern Web browsers support the X-Frame-Options HTTP header, ensure it's set on all web pages returned by your site (if you expect the page to be framed only by pages on your server (e.g. it's part of a FRAMESET) then you'll want to use SAMEORIGIN,
+			otherwise if you never expect the page to be framed, you should use DENY).</solution>
+		<url>http://site.com</url>
+		<reference>http://blogs.msdn.com/b/ieinternals/archive/2010/03/30/combating-clickjacking-with-x-frame-options.aspx?Redirected=true</reference>
+		<id>62</id>
+		<risk>Informational</risk>
+		<description>X-Frame-Options header is not included in the HTTP response to protect against 'ClickJacking' attacks</description>
+		<attack/>
+		<messageId>45</messageId>
+		<cweid>0</cweid>
+		<wascid>0</wascid>
+	</alert>
+	<alert type="set">
+		<other/>
+		<param>max-age</param>
+		<alert>Incomplete or no cache-control and pragma HTTPHeader set</alert>
+		<evidence/>
+		<reliability>Warning</reliability>
+		<solution>Whenever possible ensure the cache-control HTTPHeader is set with no-cache, no-store, must-revalidate, private, and the pragma HTTPHeader is set with no-cache.</solution>
+		<url>http://site.com</url>
+		<reference>https://www.owasp.org/index.php/Session_Management_Cheat_Sheet#Web_Content_Caching</reference>
+		<id>63</id>
+		<risk>Low</risk>
+		<description>The cache-control and pragma HTTPHeader have not been set properly allowing the browser and proxies to cache content</description>
+		<attack>315360000</attack>
+		<messageId>46</messageId>
+		<cweid>0</cweid>
+		<wascid>0</wascid>
+	</alert>
+	<alert type="set">
+		<other/>
+		<param>public</param>
+		<alert>Incomplete or no cache-control and pragma HTTPHeader set</alert>
+		<evidence/>
+		<reliability>Warning</reliability>
+		<solution>Whenever possible ensure the cache-control HTTPHeader is set with no-cache, no-store, must-revalidate, private, and the pragma HTTPHeader is set with no-cache.</solution>
+		<url>http://site.com</url>
+		<reference>https://www.owasp.org/index.php/Session_Management_Cheat_Sheet#Web_Content_Caching</reference>
+		<id>64</id>
+		<risk>Low</risk>
+		<description>The cache-control and pragma HTTPHeader have not been set properly allowing the browser and proxies to cache content</description>
+		<attack/>
+		<messageId>46</messageId>
+		<cweid>0</cweid>
+		<wascid>0</wascid>
+	</alert>
+	<alert type="set">
+		<other/>
+		<param/>
+		<alert>X-Content-Type-Options header missing</alert>
+		<evidence/>
+		<reliability>Warning</reliability>
+		<solution>This check is specific to Internet Explorer 8 and Google Chrome. Ensure each page sets a Content-Type header and the X-CONTENT-TYPE-OPTIONS if the Content-Type header is unknown</solution>
+		<url>http://site.com</url>
+		<reference/>
+		<id>66</id>
+		<risk>Low</risk>
+		<description>The Anti-MIME-Sniffing header X-Content-Type-Options was not set to 'nosniff'</description>
+		<attack/>
+		<messageId>46</messageId>
+		<cweid>0</cweid>
+		<wascid>0</wascid>
+	</alert>
+	<alert type="set">
+		<other/>
+		<param/>
+		<alert>X-Frame-Options header not set</alert>
+		<evidence/>
+		<reliability>Warning</reliability>
+		<solution>Most modern Web browsers support the X-Frame-Options HTTP header, ensure it's set on all web pages returned by your site (if you expect the page to be framed only by pages on your server (e.g. it's part of a FRAMESET) then you'll want to use SAMEORIGIN,
+			otherwise if you never expect the page to be framed, you should use DENY).</solution>
+		<url>http://site.com</url>
+		<reference>http://blogs.msdn.com/b/ieinternals/archive/2010/03/30/combating-clickjacking-with-x-frame-options.aspx?Redirected=true</reference>
+		<id>67</id>
+		<risk>Informational</risk>
+		<description>X-Frame-Options header is not included in the HTTP response to protect against 'ClickJacking' attacks</description>
+		<attack/>
+		<messageId>46</messageId>
+		<cweid>0</cweid>
+		<wascid>0</wascid>
+	</alert>
+	<alert type="set">
+		<other/>
+		<param>max-age</param>
+		<alert>Incomplete or no cache-control and pragma HTTPHeader set</alert>
+		<evidence/>
+		<reliability>Warning</reliability>
+		<solution>Whenever possible ensure the cache-control HTTPHeader is set with no-cache, no-store, must-revalidate, private, and the pragma HTTPHeader is set with no-cache.</solution>
+		<url>http://site.com</url>
+		<reference>https://www.owasp.org/index.php/Session_Management_Cheat_Sheet#Web_Content_Caching</reference>
+		<id>68</id>
+		<risk>Low</risk>
+		<description>The cache-control and pragma HTTPHeader have not been set properly allowing the browser and proxies to cache content</description>
+		<attack>315360000</attack>
+		<messageId>53</messageId>
+		<cweid>0</cweid>
+		<wascid>0</wascid>
+	</alert>
+	<alert type="set">
+		<other/>
+		<param>public</param>
+		<alert>Incomplete or no cache-control and pragma HTTPHeader set</alert>
+		<evidence/>
+		<reliability>Warning</reliability>
+		<solution>Whenever possible ensure the cache-control HTTPHeader is set with no-cache, no-store, must-revalidate, private, and the pragma HTTPHeader is set with no-cache.</solution>
+		<url>http://site.com</url>
+		<reference>https://www.owasp.org/index.php/Session_Management_Cheat_Sheet#Web_Content_Caching</reference>
+		<id>69</id>
+		<risk>Low</risk>
+		<description>The cache-control and pragma HTTPHeader have not been set properly allowing the browser and proxies to cache content</description>
+		<attack/>
+		<messageId>53</messageId>
+		<cweid>0</cweid>
+		<wascid>0</wascid>
+	</alert>
+	<alert type="set">
+		<other/>
+		<param/>
+		<alert>X-Content-Type-Options header missing</alert>
+		<evidence/>
+		<reliability>Warning</reliability>
+		<solution>This check is specific to Internet Explorer 8 and Google Chrome. Ensure each page sets a Content-Type header and the X-CONTENT-TYPE-OPTIONS if the Content-Type header is unknown</solution>
+		<url>http://site.com</url>
+		<reference/>
+		<id>71</id>
+		<risk>Low</risk>
+		<description>The Anti-MIME-Sniffing header X-Content-Type-Options was not set to 'nosniff'</description>
+		<attack/>
+		<messageId>53</messageId>
+		<cweid>0</cweid>
+		<wascid>0</wascid>
+	</alert>
+	<alert type="set">
+		<other/>
+		<param/>
+		<alert>X-Frame-Options header not set</alert>
+		<evidence/>
+		<reliability>Warning</reliability>
+		<solution>Most modern Web browsers support the X-Frame-Options HTTP header, ensure it's set on all web pages returned by your site (if you expect the page to be framed only by pages on your server (e.g. it's part of a FRAMESET) then you'll want to use SAMEORIGIN,
+			otherwise if you never expect the page to be framed, you should use DENY).</solution>
+		<url>http://site.com</url>
+		<reference>http://blogs.msdn.com/b/ieinternals/archive/2010/03/30/combating-clickjacking-with-x-frame-options.aspx?Redirected=true</reference>
+		<id>72</id>
+		<risk>Informational</risk>
+		<description>X-Frame-Options header is not included in the HTTP response to protect against 'ClickJacking' attacks</description>
+		<attack/>
+		<messageId>53</messageId>
+		<cweid>0</cweid>
+		<wascid>0</wascid>
+	</alert>
+	<alert type="set">
+		<other/>
+		<param/>
+		<alert>X-Content-Type-Options header missing</alert>
+		<evidence/>
+		<reliability>Warning</reliability>
+		<solution>This check is specific to Internet Explorer 8 and Google Chrome. Ensure each page sets a Content-Type header and the X-CONTENT-TYPE-OPTIONS if the Content-Type header is unknown</solution>
+		<url>https://ru-stat.4game.com.qa2/a/tracker.min.js?ver=dev</url>
+		<reference/>
+		<id>73</id>
+		<risk>Low</risk>
+		<description>The Anti-MIME-Sniffing header X-Content-Type-Options was not set to 'nosniff'</description>
+		<attack/>
+		<messageId>56</messageId>
+		<cweid>0</cweid>
+		<wascid>0</wascid>
+	</alert>
+	<alert type="set">
+		<other/>
+		<param/>
+		<alert>X-Frame-Options header not set</alert>
+		<evidence/>
+		<reliability>Warning</reliability>
+		<solution>Most modern Web browsers support the X-Frame-Options HTTP header, ensure it's set on all web pages returned by your site (if you expect the page to be framed only by pages on your server (e.g. it's part of a FRAMESET) then you'll want to use SAMEORIGIN,
+			otherwise if you never expect the page to be framed, you should use DENY).</solution>
+		<url>https://ru-stat.4game.com.qa2/a/tracker.min.js?ver=dev</url>
+		<reference>http://blogs.msdn.com/b/ieinternals/archive/2010/03/30/combating-clickjacking-with-x-frame-options.aspx?Redirected=true</reference>
+		<id>74</id>
+		<risk>Informational</risk>
+		<description>X-Frame-Options header is not included in the HTTP response to protect against 'ClickJacking' attacks</description>
+		<attack/>
+		<messageId>56</messageId>
+		<cweid>0</cweid>
+		<wascid>0</wascid>
+	</alert>
+	<alert type="set">
+		<other/>
+		<param>public, max-age</param>
+		<alert>Incomplete or no cache-control and pragma HTTPHeader set</alert>
+		<evidence/>
+		<reliability>Warning</reliability>
+		<solution>Whenever possible ensure the cache-control HTTPHeader is set with no-cache, no-store, must-revalidate, private, and the pragma HTTPHeader is set with no-cache.</solution>
+		<url>https://platform.twitter.com/widgets/tweet_button.html?url=https%3A%2F%2Fru.4game.com%2Flineage2%2Fplay%2F&amp;lang=ru&amp;count=horizontal</url>
+		<reference>https://www.owasp.org/index.php/Session_Management_Cheat_Sheet#Web_Content_Caching</reference>
+		<id>75</id>
+		<risk>Low</risk>
+		<description>The cache-control and pragma HTTPHeader have not been set properly allowing the browser and proxies to cache content</description>
+		<attack>1800</attack>
+		<messageId>66</messageId>
+		<cweid>0</cweid>
+		<wascid>0</wascid>
+	</alert>
+	<alert type="set">
+		<other/>
+		<param/>
+		<alert>X-Content-Type-Options header missing</alert>
+		<evidence/>
+		<reliability>Warning</reliability>
+		<solution>This check is specific to Internet Explorer 8 and Google Chrome. Ensure each page sets a Content-Type header and the X-CONTENT-TYPE-OPTIONS if the Content-Type header is unknown</solution>
+		<url>https://platform.twitter.com/widgets/tweet_button.html?url=https%3A%2F%2Fru.4game.com%2Flineage2%2Fplay%2F&amp;lang=ru&amp;count=horizontal</url>
+		<reference/>
+		<id>76</id>
+		<risk>Low</risk>
+		<description>The Anti-MIME-Sniffing header X-Content-Type-Options was not set to 'nosniff'</description>
+		<attack/>
+		<messageId>66</messageId>
+		<cweid>0</cweid>
+		<wascid>0</wascid>
+	</alert>
+	<alert type="set">
+		<other/>
+		<param/>
+		<alert>X-Frame-Options header not set</alert>
+		<evidence/>
+		<reliability>Warning</reliability>
+		<solution>Most modern Web browsers support the X-Frame-Options HTTP header, ensure it's set on all web pages returned by your site (if you expect the page to be framed only by pages on your server (e.g. it's part of a FRAMESET) then you'll want to use SAMEORIGIN,
+			otherwise if you never expect the page to be framed, you should use DENY).</solution>
+		<url>https://platform.twitter.com/widgets/tweet_button.html?url=https%3A%2F%2Fru.4game.com%2Flineage2%2Fplay%2F&amp;lang=ru&amp;count=horizontal</url>
+		<reference>http://blogs.msdn.com/b/ieinternals/archive/2010/03/30/combating-clickjacking-with-x-frame-options.aspx?Redirected=true</reference>
+		<id>77</id>
+		<risk>Informational</risk>
+		<description>X-Frame-Options header is not included in the HTTP response to protect against 'ClickJacking' attacks</description>
+		<attack/>
+		<messageId>66</messageId>
+		<cweid>0</cweid>
+		<wascid>0</wascid>
+	</alert>
+	<alert type="set">
+		<other/>
+		<param/>
+		<alert>X-Content-Type-Options header missing</alert>
+		<evidence/>
+		<reliability>Warning</reliability>
+		<solution>This check is specific to Internet Explorer 8 and Google Chrome. Ensure each page sets a Content-Type header and the X-CONTENT-TYPE-OPTIONS if the Content-Type header is unknown</solution>
+		<url>https://d31qbv1cthcecs.cloudfront.net/atrk.js</url>
+		<reference/>
+		<id>78</id>
+		<risk>Low</risk>
+		<description>The Anti-MIME-Sniffing header X-Content-Type-Options was not set to 'nosniff'</description>
+		<attack/>
+		<messageId>74</messageId>
+		<cweid>0</cweid>
+		<wascid>0</wascid>
+	</alert>
+	<alert type="set">
+		<other/>
+		<param/>
+		<alert>X-Frame-Options header not set</alert>
+		<evidence/>
+		<reliability>Warning</reliability>
+		<solution>Most modern Web browsers support the X-Frame-Options HTTP header, ensure it's set on all web pages returned by your site (if you expect the page to be framed only by pages on your server (e.g. it's part of a FRAMESET) then you'll want to use SAMEORIGIN,
+			otherwise if you never expect the page to be framed, you should use DENY).</solution>
+		<url>https://d31qbv1cthcecs.cloudfront.net/atrk.js</url>
+		<reference>http://blogs.msdn.com/b/ieinternals/archive/2010/03/30/combating-clickjacking-with-x-frame-options.aspx?Redirected=true</reference>
+		<id>79</id>
+		<risk>Informational</risk>
+		<description>X-Frame-Options header is not included in the HTTP response to protect against 'ClickJacking' attacks</description>
+		<attack/>
+		<messageId>74</messageId>
+		<cweid>0</cweid>
+		<wascid>0</wascid>
+	</alert>
+	<alert type="set">
+		<other/>
+		<param>public, max-age</param>
+		<alert>Incomplete or no cache-control and pragma HTTPHeader set</alert>
+		<evidence/>
+		<reliability>Warning</reliability>
+		<solution>Whenever possible ensure the cache-control HTTPHeader is set with no-cache, no-store, must-revalidate, private, and the pragma HTTPHeader is set with no-cache.</solution>
+		<url>https://themes.googleusercontent.com/static/fonts/ptsans/v5/7dSh6BcuqDLzS2qAASIeuj8E0i7KZn-EPnyo3HZu7kw.woff</url>
+		<reference>https://www.owasp.org/index.php/Session_Management_Cheat_Sheet#Web_Content_Caching</reference>
+		<id>80</id>
+		<risk>Low</risk>
+		<description>The cache-control and pragma HTTPHeader have not been set properly allowing the browser and proxies to cache content</description>
+		<attack>31536000</attack>
+		<messageId>80</messageId>
+		<cweid>0</cweid>
+		<wascid>0</wascid>
+	</alert>
+	<alert type="set">
+		<other/>
+		<param>max-age</param>
+		<alert>Incomplete or no cache-control and pragma HTTPHeader set</alert>
+		<evidence/>
+		<reliability>Warning</reliability>
+		<solution>Whenever possible ensure the cache-control HTTPHeader is set with no-cache, no-store, must-revalidate, private, and the pragma HTTPHeader is set with no-cache.</solution>
+		<url>http://site.com</url>
+		<reference>https://www.owasp.org/index.php/Session_Management_Cheat_Sheet#Web_Content_Caching</reference>
+		<id>81</id>
+		<risk>Low</risk>
+		<description>The cache-control and pragma HTTPHeader have not been set properly allowing the browser and proxies to cache content</description>
+		<attack>315360000</attack>
+		<messageId>81</messageId>
+		<cweid>0</cweid>
+		<wascid>0</wascid>
+	</alert>
+	<alert type="set">
+		<other/>
+		<param>public</param>
+		<alert>Incomplete or no cache-control and pragma HTTPHeader set</alert>
+		<evidence/>
+		<reliability>Warning</reliability>
+		<solution>Whenever possible ensure the cache-control HTTPHeader is set with no-cache, no-store, must-revalidate, private, and the pragma HTTPHeader is set with no-cache.</solution>
+		<url>http://site.com</url>
+		<reference>https://www.owasp.org/index.php/Session_Management_Cheat_Sheet#Web_Content_Caching</reference>
+		<id>82</id>
+		<risk>Low</risk>
+		<description>The cache-control and pragma HTTPHeader have not been set properly allowing the browser and proxies to cache content</description>
+		<attack/>
+		<messageId>81</messageId>
+		<cweid>0</cweid>
+		<wascid>0</wascid>
+	</alert>
+	<alert type="set">
+		<other/>
+		<param/>
+		<alert>X-Content-Type-Options header missing</alert>
+		<evidence/>
+		<reliability>Warning</reliability>
+		<solution>This check is specific to Internet Explorer 8 and Google Chrome. Ensure each page sets a Content-Type header and the X-CONTENT-TYPE-OPTIONS if the Content-Type header is unknown</solution>
+		<url>http://site.com</url>
+		<reference/>
+		<id>84</id>
+		<risk>Low</risk>
+		<description>The Anti-MIME-Sniffing header X-Content-Type-Options was not set to 'nosniff'</description>
+		<attack/>
+		<messageId>81</messageId>
+		<cweid>0</cweid>
+		<wascid>0</wascid>
+	</alert>
+	<alert type="set">
+		<other/>
+		<param/>
+		<alert>X-Frame-Options header not set</alert>
+		<evidence/>
+		<reliability>Warning</reliability>
+		<solution>Most modern Web browsers support the X-Frame-Options HTTP header, ensure it's set on all web pages returned by your site (if you expect the page to be framed only by pages on your server (e.g. it's part of a FRAMESET) then you'll want to use SAMEORIGIN,
+			otherwise if you never expect the page to be framed, you should use DENY).</solution>
+		<url>http://site.com</url>
+		<reference>http://blogs.msdn.com/b/ieinternals/archive/2010/03/30/combating-clickjacking-with-x-frame-options.aspx?Redirected=true</reference>
+		<id>85</id>
+		<risk>Informational</risk>
+		<description>X-Frame-Options header is not included in the HTTP response to protect against 'ClickJacking' attacks</description>
+		<attack/>
+		<messageId>81</messageId>
+		<cweid>0</cweid>
+		<wascid>0</wascid>
+	</alert>
+	<alert type="set">
+		<other/>
+		<param>public, max-age</param>
+		<alert>Incomplete or no cache-control and pragma HTTPHeader set</alert>
+		<evidence/>
+		<reliability>Warning</reliability>
+		<solution>Whenever possible ensure the cache-control HTTPHeader is set with no-cache, no-store, must-revalidate, private, and the pragma HTTPHeader is set with no-cache.</solution>
+		<url>https://themes.googleusercontent.com/static/fonts/ptsans/v5/yrzXiAvgeQQdopyG8QSg8Q.woff</url>
+		<reference>https://www.owasp.org/index.php/Session_Management_Cheat_Sheet#Web_Content_Caching</reference>
+		<id>86</id>
+		<risk>Low</risk>
+		<description>The cache-control and pragma HTTPHeader have not been set properly allowing the browser and proxies to cache content</description>
+		<attack>31536000</attack>
+		<messageId>82</messageId>
+		<cweid>0</cweid>
+		<wascid>0</wascid>
+	</alert>
+	<alert type="set">
+		<other/>
+		<param>no-cache, no-store, max-age</param>
+		<alert>Incomplete or no cache-control and pragma HTTPHeader set</alert>
+		<evidence/>
+		<reliability>Warning</reliability>
+		<solution>Whenever possible ensure the cache-control HTTPHeader is set with no-cache, no-store, must-revalidate, private, and the pragma HTTPHeader is set with no-cache.</solution>
+		<url>https://plusone.google.com/_/+1/fastbutton?url=https%3A%2F%2Fru.4game.com%2Flineage2%2Fplay%2F&amp;size=medium&amp;count=true</url>
+		<reference>https://www.owasp.org/index.php/Session_Management_Cheat_Sheet#Web_Content_Caching</reference>
+		<id>87</id>
+		<risk>Low</risk>
+		<description>The cache-control and pragma HTTPHeader have not been set properly allowing the browser and proxies to cache content</description>
+		<attack>0, must-revalidate</attack>
+		<messageId>83</messageId>
+		<cweid>0</cweid>
+		<wascid>0</wascid>
+	</alert>
+	<alert type="set">
+		<other/>
+		<param>NID</param>
+		<alert>Cookie set without secure flag</alert>
+		<evidence>NID=67=uyfo4MipolaDlhzA6XmNTAZJszLaciCzsqwlJc1B89VLoGCOZG3e4GS50uq-_EkeDwnFFCkaDVKKvHQfozQL-YLXSIMQpeFpIrPS0kR9Hxob9btHAeD60V0sXZiMp_gb;Domain=.google.com;Path=/;Expires=Wed, 11-Jun-2014 10:06:17 GMT;HttpOnly</evidence>
+		<reliability>Warning</reliability>
+		<solution>Whenever a cookie contains sensitive information or is a session token, then it should always be passed using an encrypted tunnel. Ensure that the secure flag is set for cookies containing such sensitive information.</solution>
+		<url>https://plusone.google.com/_/+1/fastbutton?url=https%3A%2F%2Fru.4game.com%2Flineage2%2Fplay%2F&amp;size=medium&amp;count=true</url>
+		<reference>http://www.owasp.org/index.php/Testing_for_cookies_attributes_(OWASP-SM-002)</reference>
+		<id>88</id>
+		<risk>Low</risk>
+		<description>A cookie has been set without the secure flag, which means that the cookie can be accessed via unencrypted connections.</description>
+		<attack>67=uyfo4MipolaDlhzA6XmNTAZJszLaciCzsqwlJc1B89VLoGCOZG3e4GS50uq-_EkeDwnFFCkaDVKKvHQfozQL-YLXSIMQpeFpIrPS0kR9Hxob9btHAeD60V0sXZiMp_gb;Domain=.google.com;Path=/;Expires=Wed, 11-Jun-2014 10:06:17 GMT;HttpOnly</attack>
+		<messageId>83</messageId>
+		<cweid>0</cweid>
+		<wascid>13</wascid>
+	</alert>
+	<alert type="set">
+		<other/>
+		<param/>
+		<alert>X-Frame-Options header not set</alert>
+		<evidence/>
+		<reliability>Warning</reliability>
+		<solution>Most modern Web browsers support the X-Frame-Options HTTP header, ensure it's set on all web pages returned by your site (if you expect the page to be framed only by pages on your server (e.g. it's part of a FRAMESET) then you'll want to use SAMEORIGIN,
+			otherwise if you never expect the page to be framed, you should use DENY).</solution>
+		<url>https://plusone.google.com/_/+1/fastbutton?url=https%3A%2F%2Fru.4game.com%2Flineage2%2Fplay%2F&amp;size=medium&amp;count=true</url>
+		<reference>http://blogs.msdn.com/b/ieinternals/archive/2010/03/30/combating-clickjacking-with-x-frame-options.aspx?Redirected=true</reference>
+		<id>89</id>
+		<risk>Informational</risk>
+		<description>X-Frame-Options header is not included in the HTTP response to protect against 'ClickJacking' attacks</description>
+		<attack/>
+		<messageId>83</messageId>
+		<cweid>0</cweid>
+		<wascid>0</wascid>
+	</alert>
+	<alert type="set">
+		<other/>
+		<param>public, max-age</param>
+		<alert>Incomplete or no cache-control and pragma HTTPHeader set</alert>
+		<evidence/>
+		<reliability>Warning</reliability>
+		<solution>Whenever possible ensure the cache-control HTTPHeader is set with no-cache, no-store, must-revalidate, private, and the pragma HTTPHeader is set with no-cache.</solution>
+		<url>https://themes.googleusercontent.com/static/fonts/ptsans/v5/lILlYDvubYemzYzN7GbLkIraN7vELC11_xip9Rz-hMs.woff</url>
+		<reference>https://www.owasp.org/index.php/Session_Management_Cheat_Sheet#Web_Content_Caching</reference>
+		<id>90</id>
+		<risk>Low</risk>
+		<description>The cache-control and pragma HTTPHeader have not been set properly allowing the browser and proxies to cache content</description>
+		<attack>31536000</attack>
+		<messageId>84</messageId>
+		<cweid>0</cweid>
+		<wascid>0</wascid>
+	</alert>
+	<alert type="set">
+		<other/>
+		<param>public, max-age</param>
+		<alert>Incomplete or no cache-control and pragma HTTPHeader set</alert>
+		<evidence/>
+		<reliability>Warning</reliability>
+		<solution>Whenever possible ensure the cache-control HTTPHeader is set with no-cache, no-store, must-revalidate, private, and the pragma HTTPHeader is set with no-cache.</solution>
+		<url>https://themes.googleusercontent.com/static/fonts/philosopher/v4/OttjxgcoEsufOGSINYBGLWOb2gHztoQeulij-1lvl-8.woff</url>
+		<reference>https://www.owasp.org/index.php/Session_Management_Cheat_Sheet#Web_Content_Caching</reference>
+		<id>91</id>
+		<risk>Low</risk>
+		<description>The cache-control and pragma HTTPHeader have not been set properly allowing the browser and proxies to cache content</description>
+		<attack>31536000</attack>
+		<messageId>85</messageId>
+		<cweid>0</cweid>
+		<wascid>0</wascid>
+	</alert>
+	<alert type="set">
+		<other/>
+		<param>public, max-age</param>
+		<alert>Incomplete or no cache-control and pragma HTTPHeader set</alert>
+		<evidence/>
+		<reliability>Warning</reliability>
+		<solution>Whenever possible ensure the cache-control HTTPHeader is set with no-cache, no-store, must-revalidate, private, and the pragma HTTPHeader is set with no-cache.</solution>
+		<url>https://themes.googleusercontent.com/static/fonts/ptsans/v5/g46X4VH_KHOWAAa-HpnGPhsxEYwM7FgeyaSgU71cLG0.woff</url>
+		<reference>https://www.owasp.org/index.php/Session_Management_Cheat_Sheet#Web_Content_Caching</reference>
+		<id>92</id>
+		<risk>Low</risk>
+		<description>The cache-control and pragma HTTPHeader have not been set properly allowing the browser and proxies to cache content</description>
+		<attack>31536000</attack>
+		<messageId>88</messageId>
+		<cweid>0</cweid>
+		<wascid>0</wascid>
+	</alert>
+	<alert type="set">
+		<other/>
+		<param>public, max-age</param>
+		<alert>Incomplete or no cache-control and pragma HTTPHeader set</alert>
+		<evidence/>
+		<reliability>Warning</reliability>
+		<solution>Whenever possible ensure the cache-control HTTPHeader is set with no-cache, no-store, must-revalidate, private, and the pragma HTTPHeader is set with no-cache.</solution>
+		<url>https://themes.googleusercontent.com/static/fonts/philosopher/v4/napvkewXG9Gqby5vwGHICFRROVH9Vvc8xHnAGvvgPQc.woff</url>
+		<reference>https://www.owasp.org/index.php/Session_Management_Cheat_Sheet#Web_Content_Caching</reference>
+		<id>93</id>
+		<risk>Low</risk>
+		<description>The cache-control and pragma HTTPHeader have not been set properly allowing the browser and proxies to cache content</description>
+		<attack>31536000</attack>
+		<messageId>89</messageId>
+		<cweid>0</cweid>
+		<wascid>0</wascid>
+	</alert>
+	<alert type="set">
+		<other/>
+		<param>0</param>
+		<alert>IE8's XSS protection filter not disabled</alert>
+		<evidence/>
+		<reliability>Warning</reliability>
+		<solution>Enable the IE's XSS filter. If it must be disabled for any reasons, ensure that the application is properly protected against XSS vulnerability</solution>
+		<url>https://www.facebook.com/plugins/like.php?locale=ru_RU&amp;href=https%3A%2F%2Fru.4game.com%2Flineage2%2Fplay%2F&amp;send=false&amp;layout=button_count&amp;width=130&amp;show_faces=false&amp;font=arial&amp;colorscheme=light&amp;action=like&amp;height=21</url>
+		<reference>https://www.owasp.org/index.php/XSS_(Cross_Site_Scripting)_Prevention_Cheat_Sheet</reference>
+		<id>94</id>
+		<risk>Informational</risk>
+		<description>The x-xss-protection header has been disabled by the web application</description>
+		<attack/>
+		<messageId>93</messageId>
+		<cweid>0</cweid>
+		<wascid>0</wascid>
+	</alert>
+	<alert type="set">
+		<other/>
+		<param/>
+		<alert>X-Frame-Options header not set</alert>
+		<evidence/>
+		<reliability>Warning</reliability>
+		<solution>Most modern Web browsers support the X-Frame-Options HTTP header, ensure it's set on all web pages returned by your site (if you expect the page to be framed only by pages on your server (e.g. it's part of a FRAMESET) then you'll want to use SAMEORIGIN,
+			otherwise if you never expect the page to be framed, you should use DENY).</solution>
+		<url>https://www.facebook.com/plugins/like.php?locale=ru_RU&amp;href=https%3A%2F%2Fru.4game.com%2Flineage2%2Fplay%2F&amp;send=false&amp;layout=button_count&amp;width=130&amp;show_faces=false&amp;font=arial&amp;colorscheme=light&amp;action=like&amp;height=21</url>
+		<reference>http://blogs.msdn.com/b/ieinternals/archive/2010/03/30/combating-clickjacking-with-x-frame-options.aspx?Redirected=true</reference>
+		<id>95</id>
+		<risk>Informational</risk>
+		<description>X-Frame-Options header is not included in the HTTP response to protect against 'ClickJacking' attacks</description>
+		<attack/>
+		<messageId>93</messageId>
+		<cweid>0</cweid>
+		<wascid>0</wascid>
+	</alert>
+	<alert type="set">
+		<other/>
+		<param>public, max-age</param>
+		<alert>Incomplete or no cache-control and pragma HTTPHeader set</alert>
+		<evidence/>
+		<reliability>Warning</reliability>
+		<solution>Whenever possible ensure the cache-control HTTPHeader is set with no-cache, no-store, must-revalidate, private, and the pragma HTTPHeader is set with no-cache.</solution>
+		<url>https://plusone.google.com/_/scs/apps-static/_/ss/k=oz.plusone.-1323gvnxi8q6c.L.F4.O/rs=AItRSTPBmdkTbQrt9hA6Ubrod7zJ2BfVeQ</url>
+		<reference>https://www.owasp.org/index.php/Session_Management_Cheat_Sheet#Web_Content_Caching</reference>
+		<id>98</id>
+		<risk>Low</risk>
+		<description>The cache-control and pragma HTTPHeader have not been set properly allowing the browser and proxies to cache content</description>
+		<attack>691200</attack>
+		<messageId>95</messageId>
+		<cweid>0</cweid>
+		<wascid>0</wascid>
+	</alert>
+	<alert type="set">
+		<other/>
+		<param/>
+		<alert>X-Frame-Options header not set</alert>
+		<evidence/>
+		<reliability>Warning</reliability>
+		<solution>Most modern Web browsers support the X-Frame-Options HTTP header, ensure it's set on all web pages returned by your site (if you expect the page to be framed only by pages on your server (e.g. it's part of a FRAMESET) then you'll want to use SAMEORIGIN,
+			otherwise if you never expect the page to be framed, you should use DENY).</solution>
+		<url>https://plusone.google.com/_/scs/apps-static/_/ss/k=oz.plusone.-1323gvnxi8q6c.L.F4.O/rs=AItRSTPBmdkTbQrt9hA6Ubrod7zJ2BfVeQ</url>
+		<reference>http://blogs.msdn.com/b/ieinternals/archive/2010/03/30/combating-clickjacking-with-x-frame-options.aspx?Redirected=true</reference>
+		<id>99</id>
+		<risk>Informational</risk>
+		<description>X-Frame-Options header is not included in the HTTP response to protect against 'ClickJacking' attacks</description>
+		<attack/>
+		<messageId>95</messageId>
+		<cweid>0</cweid>
+		<wascid>0</wascid>
+	</alert>
+	<alert type="set">
+		<other/>
+		<param>public, max-age</param>
+		<alert>Incomplete or no cache-control and pragma HTTPHeader set</alert>
+		<evidence/>
+		<reliability>Warning</reliability>
+		<solution>Whenever possible ensure the cache-control HTTPHeader is set with no-cache, no-store, must-revalidate, private, and the pragma HTTPHeader is set with no-cache.</solution>
+		<url>https://fbstatic-a.akamaihd.net/rsrc.php/v2/y9/r/umzRVV2-C5e.js</url>
+		<reference>https://www.owasp.org/index.php/Session_Management_Cheat_Sheet#Web_Content_Caching</reference>
+		<id>100</id>
+		<risk>Low</risk>
+		<description>The cache-control and pragma HTTPHeader have not been set properly allowing the browser and proxies to cache content</description>
+		<attack>31493876</attack>
+		<messageId>96</messageId>
+		<cweid>0</cweid>
+		<wascid>0</wascid>
+	</alert>
+	<alert type="set">
+		<other/>
+		<param/>
+		<alert>X-Frame-Options header not set</alert>
+		<evidence/>
+		<reliability>Warning</reliability>
+		<solution>Most modern Web browsers support the X-Frame-Options HTTP header, ensure it's set on all web pages returned by your site (if you expect the page to be framed only by pages on your server (e.g. it's part of a FRAMESET) then you'll want to use SAMEORIGIN,
+			otherwise if you never expect the page to be framed, you should use DENY).</solution>
+		<url>https://fbstatic-a.akamaihd.net/rsrc.php/v2/y9/r/umzRVV2-C5e.js</url>
+		<reference>http://blogs.msdn.com/b/ieinternals/archive/2010/03/30/combating-clickjacking-with-x-frame-options.aspx?Redirected=true</reference>
+		<id>101</id>
+		<risk>Informational</risk>
+		<description>X-Frame-Options header is not included in the HTTP response to protect against 'ClickJacking' attacks</description>
+		<attack/>
+		<messageId>96</messageId>
+		<cweid>0</cweid>
+		<wascid>0</wascid>
+	</alert>
+	<alert type="set">
+		<other/>
+		<param>max-age</param>
+		<alert>Incomplete or no cache-control and pragma HTTPHeader set</alert>
+		<evidence/>
+		<reliability>Warning</reliability>
+		<solution>Whenever possible ensure the cache-control HTTPHeader is set with no-cache, no-store, must-revalidate, private, and the pragma HTTPHeader is set with no-cache.</solution>
+		<url>http://site.com</url>
+		<reference>https://www.owasp.org/index.php/Session_Management_Cheat_Sheet#Web_Content_Caching</reference>
+		<id>102</id>
+		<risk>Low</risk>
+		<description>The cache-control and pragma HTTPHeader have not been set properly allowing the browser and proxies to cache content</description>
+		<attack>315360000</attack>
+		<messageId>97</messageId>
+		<cweid>0</cweid>
+		<wascid>0</wascid>
+	</alert>
+	<alert type="set">
+		<other/>
+		<param>public</param>
+		<alert>Incomplete or no cache-control and pragma HTTPHeader set</alert>
+		<evidence/>
+		<reliability>Warning</reliability>
+		<solution>Whenever possible ensure the cache-control HTTPHeader is set with no-cache, no-store, must-revalidate, private, and the pragma HTTPHeader is set with no-cache.</solution>
+		<url>http://site.com</url>
+		<reference>https://www.owasp.org/index.php/Session_Management_Cheat_Sheet#Web_Content_Caching</reference>
+		<id>103</id>
+		<risk>Low</risk>
+		<description>The cache-control and pragma HTTPHeader have not been set properly allowing the browser and proxies to cache content</description>
+		<attack/>
+		<messageId>97</messageId>
+		<cweid>0</cweid>
+		<wascid>0</wascid>
+	</alert>
+	<alert type="set">
+		<other/>
+		<param/>
+		<alert>X-Content-Type-Options header missing</alert>
+		<evidence/>
+		<reliability>Warning</reliability>
+		<solution>This check is specific to Internet Explorer 8 and Google Chrome. Ensure each page sets a Content-Type header and the X-CONTENT-TYPE-OPTIONS if the Content-Type header is unknown</solution>
+		<url>http://site.com</url>
+		<reference/>
+		<id>105</id>
+		<risk>Low</risk>
+		<description>The Anti-MIME-Sniffing header X-Content-Type-Options was not set to 'nosniff'</description>
+		<attack/>
+		<messageId>97</messageId>
+		<cweid>0</cweid>
+		<wascid>0</wascid>
+	</alert>
+	<alert type="set">
+		<other/>
+		<param/>
+		<alert>X-Frame-Options header not set</alert>
+		<evidence/>
+		<reliability>Warning</reliability>
+		<solution>Most modern Web browsers support the X-Frame-Options HTTP header, ensure it's set on all web pages returned by your site (if you expect the page to be framed only by pages on your server (e.g. it's part of a FRAMESET) then you'll want to use SAMEORIGIN,
+			otherwise if you never expect the page to be framed, you should use DENY).</solution>
+		<url>http://site.com</url>
+		<reference>http://blogs.msdn.com/b/ieinternals/archive/2010/03/30/combating-clickjacking-with-x-frame-options.aspx?Redirected=true</reference>
+		<id>106</id>
+		<risk>Informational</risk>
+		<description>X-Frame-Options header is not included in the HTTP response to protect against 'ClickJacking' attacks</description>
+		<attack/>
+		<messageId>97</messageId>
+		<cweid>0</cweid>
+		<wascid>0</wascid>
+	</alert>
+	<alert type="set">
+		<other/>
+		<param>must-revalidate, max-age</param>
+		<alert>Incomplete or no cache-control and pragma HTTPHeader set</alert>
+		<evidence/>
+		<reliability>Warning</reliability>
+		<solution>Whenever possible ensure the cache-control HTTPHeader is set with no-cache, no-store, must-revalidate, private, and the pragma HTTPHeader is set with no-cache.</solution>
+		<url>https://cdn.api.twitter.com/1/urls/count.json?url=https%3A%2F%2Fru.4game.com%2Flineage2%2Fplay%2F&amp;callback=twttr.receiveCount</url>
+		<reference>https://www.owasp.org/index.php/Session_Management_Cheat_Sheet#Web_Content_Caching</reference>
+		<id>107</id>
+		<risk>Low</risk>
+		<description>The cache-control and pragma HTTPHeader have not been set properly allowing the browser and proxies to cache content</description>
+		<attack>693</attack>
+		<messageId>101</messageId>
+		<cweid>0</cweid>
+		<wascid>0</wascid>
+	</alert>
+	<alert type="set">
+		<other/>
+		<param/>
+		<alert>X-Content-Type-Options header missing</alert>
+		<evidence/>
+		<reliability>Warning</reliability>
+		<solution>This check is specific to Internet Explorer 8 and Google Chrome. Ensure each page sets a Content-Type header and the X-CONTENT-TYPE-OPTIONS if the Content-Type header is unknown</solution>
+		<url>https://cdn.api.twitter.com/1/urls/count.json?url=https%3A%2F%2Fru.4game.com%2Flineage2%2Fplay%2F&amp;callback=twttr.receiveCount</url>
+		<reference/>
+		<id>108</id>
+		<risk>Low</risk>
+		<description>The Anti-MIME-Sniffing header X-Content-Type-Options was not set to 'nosniff'</description>
+		<attack/>
+		<messageId>101</messageId>
+		<cweid>0</cweid>
+		<wascid>0</wascid>
+	</alert>
+	<alert type="set">
+		<other/>
+		<param/>
+		<alert>X-Frame-Options header not set</alert>
+		<evidence/>
+		<reliability>Warning</reliability>
+		<solution>Most modern Web browsers support the X-Frame-Options HTTP header, ensure it's set on all web pages returned by your site (if you expect the page to be framed only by pages on your server (e.g. it's part of a FRAMESET) then you'll want to use SAMEORIGIN,
+			otherwise if you never expect the page to be framed, you should use DENY).</solution>
+		<url>https://cdn.api.twitter.com/1/urls/count.json?url=https%3A%2F%2Fru.4game.com%2Flineage2%2Fplay%2F&amp;callback=twttr.receiveCount</url>
+		<reference>http://blogs.msdn.com/b/ieinternals/archive/2010/03/30/combating-clickjacking-with-x-frame-options.aspx?Redirected=true</reference>
+		<id>109</id>
+		<risk>Informational</risk>
+		<description>X-Frame-Options header is not included in the HTTP response to protect against 'ClickJacking' attacks</description>
+		<attack/>
+		<messageId>101</messageId>
+		<cweid>0</cweid>
+		<wascid>0</wascid>
+	</alert>
+	<alert type="set">
+		<other/>
+		<param>public, max-age</param>
+		<alert>Incomplete or no cache-control and pragma HTTPHeader set</alert>
+		<evidence/>
+		<reliability>Warning</reliability>
+		<solution>Whenever possible ensure the cache-control HTTPHeader is set with no-cache, no-store, must-revalidate, private, and the pragma HTTPHeader is set with no-cache.</solution>
+		<url>https://plusone.google.com/_/scs/apps-static/_/js/k=oz.gapi.ru.mFjeZZ0vNCM.O/m=googleapis_client,iframes_styles_bubble_internal,iframes/rt=j/sv=1/d=1/ed=1/am=EQ/rs=AItRSTMdSY45wRr59XBK0dksZuVVny3N_A/cb=gapi.loaded_0</url>
+		<reference>https://www.owasp.org/index.php/Session_Management_Cheat_Sheet#Web_Content_Caching</reference>
+		<id>110</id>
+		<risk>Low</risk>
+		<description>The cache-control and pragma HTTPHeader have not been set properly allowing the browser and proxies to cache content</description>
+		<attack>691200</attack>
+		<messageId>134</messageId>
+		<cweid>0</cweid>
+		<wascid>0</wascid>
+	</alert>
+	<alert type="set">
+		<other/>
+		<param/>
+		<alert>X-Frame-Options header not set</alert>
+		<evidence/>
+		<reliability>Warning</reliability>
+		<solution>Most modern Web browsers support the X-Frame-Options HTTP header, ensure it's set on all web pages returned by your site (if you expect the page to be framed only by pages on your server (e.g. it's part of a FRAMESET) then you'll want to use SAMEORIGIN,
+			otherwise if you never expect the page to be framed, you should use DENY).</solution>
+		<url>https://plusone.google.com/_/scs/apps-static/_/js/k=oz.gapi.ru.mFjeZZ0vNCM.O/m=googleapis_client,iframes_styles_bubble_internal,iframes/rt=j/sv=1/d=1/ed=1/am=EQ/rs=AItRSTMdSY45wRr59XBK0dksZuVVny3N_A/cb=gapi.loaded_0</url>
+		<reference>http://blogs.msdn.com/b/ieinternals/archive/2010/03/30/combating-clickjacking-with-x-frame-options.aspx?Redirected=true</reference>
+		<id>111</id>
+		<risk>Informational</risk>
+		<description>X-Frame-Options header is not included in the HTTP response to protect against 'ClickJacking' attacks</description>
+		<attack/>
+		<messageId>134</messageId>
+		<cweid>0</cweid>
+		<wascid>0</wascid>
+	</alert>
+	<alert type="set">
+		<other/>
+		<param>max-age</param>
+		<alert>Incomplete or no cache-control and pragma HTTPHeader set</alert>
+		<evidence/>
+		<reliability>Warning</reliability>
+		<solution>Whenever possible ensure the cache-control HTTPHeader is set with no-cache, no-store, must-revalidate, private, and the pragma HTTPHeader is set with no-cache.</solution>
+		<url>http://site.com</url>
+		<reference>https://www.owasp.org/index.php/Session_Management_Cheat_Sheet#Web_Content_Caching</reference>
+		<id>112</id>
+		<risk>Low</risk>
+		<description>The cache-control and pragma HTTPHeader have not been set properly allowing the browser and proxies to cache content</description>
+		<attack>315360000</attack>
+		<messageId>140</messageId>
+		<cweid>0</cweid>
+		<wascid>0</wascid>
+	</alert>
+	<alert type="set">
+		<other/>
+		<param>public</param>
+		<alert>Incomplete or no cache-control and pragma HTTPHeader set</alert>
+		<evidence/>
+		<reliability>Warning</reliability>
+		<solution>Whenever possible ensure the cache-control HTTPHeader is set with no-cache, no-store, must-revalidate, private, and the pragma HTTPHeader is set with no-cache.</solution>
+		<url>http://site.com</url>
+		<reference>https://www.owasp.org/index.php/Session_Management_Cheat_Sheet#Web_Content_Caching</reference>
+		<id>113</id>
+		<risk>Low</risk>
+		<description>The cache-control and pragma HTTPHeader have not been set properly allowing the browser and proxies to cache content</description>
+		<attack/>
+		<messageId>140</messageId>
+		<cweid>0</cweid>
+		<wascid>0</wascid>
+	</alert>
+	<alert type="set">
+		<other/>
+		<param/>
+		<alert>X-Content-Type-Options header missing</alert>
+		<evidence/>
+		<reliability>Warning</reliability>
+		<solution>This check is specific to Internet Explorer 8 and Google Chrome. Ensure each page sets a Content-Type header and the X-CONTENT-TYPE-OPTIONS if the Content-Type header is unknown</solution>
+		<url>http://site.com</url>
+		<reference/>
+		<id>115</id>
+		<risk>Low</risk>
+		<description>The Anti-MIME-Sniffing header X-Content-Type-Options was not set to 'nosniff'</description>
+		<attack/>
+		<messageId>140</messageId>
+		<cweid>0</cweid>
+		<wascid>0</wascid>
+	</alert>
+	<alert type="set">
+		<other/>
+		<param/>
+		<alert>X-Frame-Options header not set</alert>
+		<evidence/>
+		<reliability>Warning</reliability>
+		<solution>Most modern Web browsers support the X-Frame-Options HTTP header, ensure it's set on all web pages returned by your site (if you expect the page to be framed only by pages on your server (e.g. it's part of a FRAMESET) then you'll want to use SAMEORIGIN,
+			otherwise if you never expect the page to be framed, you should use DENY).</solution>
+		<url>http://site.com</url>
+		<reference>http://blogs.msdn.com/b/ieinternals/archive/2010/03/30/combating-clickjacking-with-x-frame-options.aspx?Redirected=true</reference>
+		<id>116</id>
+		<risk>Informational</risk>
+		<description>X-Frame-Options header is not included in the HTTP response to protect against 'ClickJacking' attacks</description>
+		<attack/>
+		<messageId>140</messageId>
+		<cweid>0</cweid>
+		<wascid>0</wascid>
+	</alert>
+	<alert type="set">
+		<other/>
+		<param>max-age</param>
+		<alert>Incomplete or no cache-control and pragma HTTPHeader set</alert>
+		<evidence/>
+		<reliability>Warning</reliability>
+		<solution>Whenever possible ensure the cache-control HTTPHeader is set with no-cache, no-store, must-revalidate, private, and the pragma HTTPHeader is set with no-cache.</solution>
+		<url>http://site.com</url>
+		<reference>https://www.owasp.org/index.php/Session_Management_Cheat_Sheet#Web_Content_Caching</reference>
+		<id>117</id>
+		<risk>Low</risk>
+		<description>The cache-control and pragma HTTPHeader have not been set properly allowing the browser and proxies to cache content</description>
+		<attack>86400</attack>
+		<messageId>150</messageId>
+		<cweid>0</cweid>
+		<wascid>0</wascid>
+	</alert>
+	<alert type="set">
+		<other/>
+		<param/>
+		<alert>X-Content-Type-Options header missing</alert>
+		<evidence/>
+		<reliability>Warning</reliability>
+		<solution>This check is specific to Internet Explorer 8 and Google Chrome. Ensure each page sets a Content-Type header and the X-CONTENT-TYPE-OPTIONS if the Content-Type header is unknown</solution>
+		<url>http://site.com</url>
+		<reference/>
+		<id>118</id>
+		<risk>Low</risk>
+		<description>The Anti-MIME-Sniffing header X-Content-Type-Options was not set to 'nosniff'</description>
+		<attack/>
+		<messageId>150</messageId>
+		<cweid>0</cweid>
+		<wascid>0</wascid>
+	</alert>
+	<alert type="set">
+		<other/>
+		<param/>
+		<alert>X-Frame-Options header not set</alert>
+		<evidence/>
+		<reliability>Warning</reliability>
+		<solution>Most modern Web browsers support the X-Frame-Options HTTP header, ensure it's set on all web pages returned by your site (if you expect the page to be framed only by pages on your server (e.g. it's part of a FRAMESET) then you'll want to use SAMEORIGIN,
+			otherwise if you never expect the page to be framed, you should use DENY).</solution>
+		<url>http://site.com</url>
+		<reference>http://blogs.msdn.com/b/ieinternals/archive/2010/03/30/combating-clickjacking-with-x-frame-options.aspx?Redirected=true</reference>
+		<id>119</id>
+		<risk>Informational</risk>
+		<description>X-Frame-Options header is not included in the HTTP response to protect against 'ClickJacking' attacks</description>
+		<attack/>
+		<messageId>150</messageId>
+		<cweid>0</cweid>
+		<wascid>0</wascid>
+	</alert>
+	<alert type="set">
+		<other/>
+		<param>max-age</param>
+		<alert>Incomplete or no cache-control and pragma HTTPHeader set</alert>
+		<evidence/>
+		<reliability>Warning</reliability>
+		<solution>Whenever possible ensure the cache-control HTTPHeader is set with no-cache, no-store, must-revalidate, private, and the pragma HTTPHeader is set with no-cache.</solution>
+		<url>http://site.com</url>
+		<reference>https://www.owasp.org/index.php/Session_Management_Cheat_Sheet#Web_Content_Caching</reference>
+		<id>120</id>
+		<risk>Low</risk>
+		<description>The cache-control and pragma HTTPHeader have not been set properly allowing the browser and proxies to cache content</description>
+		<attack>315360000</attack>
+		<messageId>151</messageId>
+		<cweid>0</cweid>
+		<wascid>0</wascid>
+	</alert>
+	<alert type="set">
+		<other/>
+		<param>public</param>
+		<alert>Incomplete or no cache-control and pragma HTTPHeader set</alert>
+		<evidence/>
+		<reliability>Warning</reliability>
+		<solution>Whenever possible ensure the cache-control HTTPHeader is set with no-cache, no-store, must-revalidate, private, and the pragma HTTPHeader is set with no-cache.</solution>
+		<url>http://site.com</url>
+		<reference>https://www.owasp.org/index.php/Session_Management_Cheat_Sheet#Web_Content_Caching</reference>
+		<id>121</id>
+		<risk>Low</risk>
+		<description>The cache-control and pragma HTTPHeader have not been set properly allowing the browser and proxies to cache content</description>
+		<attack/>
+		<messageId>151</messageId>
+		<cweid>0</cweid>
+		<wascid>0</wascid>
+	</alert>
+	<alert type="set">
+		<other/>
+		<param/>
+		<alert>X-Content-Type-Options header missing</alert>
+		<evidence/>
+		<reliability>Warning</reliability>
+		<solution>This check is specific to Internet Explorer 8 and Google Chrome. Ensure each page sets a Content-Type header and the X-CONTENT-TYPE-OPTIONS if the Content-Type header is unknown</solution>
+		<url>http://site.com</url>
+		<reference/>
+		<id>123</id>
+		<risk>Low</risk>
+		<description>The Anti-MIME-Sniffing header X-Content-Type-Options was not set to 'nosniff'</description>
+		<attack/>
+		<messageId>151</messageId>
+		<cweid>0</cweid>
+		<wascid>0</wascid>
+	</alert>
+	<alert type="set">
+		<other/>
+		<param/>
+		<alert>X-Frame-Options header not set</alert>
+		<evidence/>
+		<reliability>Warning</reliability>
+		<solution>Most modern Web browsers support the X-Frame-Options HTTP header, ensure it's set on all web pages returned by your site (if you expect the page to be framed only by pages on your server (e.g. it's part of a FRAMESET) then you'll want to use SAMEORIGIN,
+			otherwise if you never expect the page to be framed, you should use DENY).</solution>
+		<url>http://site.com</url>
+		<reference>http://blogs.msdn.com/b/ieinternals/archive/2010/03/30/combating-clickjacking-with-x-frame-options.aspx?Redirected=true</reference>
+		<id>124</id>
+		<risk>Informational</risk>
+		<description>X-Frame-Options header is not included in the HTTP response to protect against 'ClickJacking' attacks</description>
+		<attack/>
+		<messageId>151</messageId>
+		<cweid>0</cweid>
+		<wascid>0</wascid>
+	</alert>
+	<alert type="set">
+		<other/>
+		<param>max-age</param>
+		<alert>Incomplete or no cache-control and pragma HTTPHeader set</alert>
+		<evidence/>
+		<reliability>Warning</reliability>
+		<solution>Whenever possible ensure the cache-control HTTPHeader is set with no-cache, no-store, must-revalidate, private, and the pragma HTTPHeader is set with no-cache.</solution>
+		<url>http://site.com</url>
+		<reference>https://www.owasp.org/index.php/Session_Management_Cheat_Sheet#Web_Content_Caching</reference>
+		<id>125</id>
+		<risk>Low</risk>
+		<description>The cache-control and pragma HTTPHeader have not been set properly allowing the browser and proxies to cache content</description>
+		<attack>86400</attack>
+		<messageId>152</messageId>
+		<cweid>0</cweid>
+		<wascid>0</wascid>
+	</alert>
+	<alert type="set">
+		<other/>
+		<param/>
+		<alert>X-Content-Type-Options header missing</alert>
+		<evidence/>
+		<reliability>Warning</reliability>
+		<solution>This check is specific to Internet Explorer 8 and Google Chrome. Ensure each page sets a Content-Type header and the X-CONTENT-TYPE-OPTIONS if the Content-Type header is unknown</solution>
+		<url>http://site.com</url>
+		<reference/>
+		<id>126</id>
+		<risk>Low</risk>
+		<description>The Anti-MIME-Sniffing header X-Content-Type-Options was not set to 'nosniff'</description>
+		<attack/>
+		<messageId>152</messageId>
+		<cweid>0</cweid>
+		<wascid>0</wascid>
+	</alert>
+	<alert type="set">
+		<other/>
+		<param/>
+		<alert>X-Frame-Options header not set</alert>
+		<evidence/>
+		<reliability>Warning</reliability>
+		<solution>Most modern Web browsers support the X-Frame-Options HTTP header, ensure it's set on all web pages returned by your site (if you expect the page to be framed only by pages on your server (e.g. it's part of a FRAMESET) then you'll want to use SAMEORIGIN,
+			otherwise if you never expect the page to be framed, you should use DENY).</solution>
+		<url>http://site.com</url>
+		<reference>http://blogs.msdn.com/b/ieinternals/archive/2010/03/30/combating-clickjacking-with-x-frame-options.aspx?Redirected=true</reference>
+		<id>127</id>
+		<risk>Informational</risk>
+		<description>X-Frame-Options header is not included in the HTTP response to protect against 'ClickJacking' attacks</description>
+		<attack/>
+		<messageId>152</messageId>
+		<cweid>0</cweid>
+		<wascid>0</wascid>
+	</alert>
+	<alert type="set">
+		<other/>
+		<param>max-age</param>
+		<alert>Incomplete or no cache-control and pragma HTTPHeader set</alert>
+		<evidence/>
+		<reliability>Warning</reliability>
+		<solution>Whenever possible ensure the cache-control HTTPHeader is set with no-cache, no-store, must-revalidate, private, and the pragma HTTPHeader is set with no-cache.</solution>
+		<url>https://yandex.st/jquery/hotkeys/1.0.0/jquery.hotkeys.min.js</url>
+		<reference>https://www.owasp.org/index.php/Session_Management_Cheat_Sheet#Web_Content_Caching</reference>
+		<id>128</id>
+		<risk>Low</risk>
+		<description>The cache-control and pragma HTTPHeader have not been set properly allowing the browser and proxies to cache content</description>
+		<attack>315360000</attack>
+		<messageId>153</messageId>
+		<cweid>0</cweid>
+		<wascid>0</wascid>
+	</alert>
+	<alert type="set">
+		<other/>
+		<param/>
+		<alert>X-Content-Type-Options header missing</alert>
+		<evidence/>
+		<reliability>Warning</reliability>
+		<solution>This check is specific to Internet Explorer 8 and Google Chrome. Ensure each page sets a Content-Type header and the X-CONTENT-TYPE-OPTIONS if the Content-Type header is unknown</solution>
+		<url>https://yandex.st/jquery/hotkeys/1.0.0/jquery.hotkeys.min.js</url>
+		<reference/>
+		<id>129</id>
+		<risk>Low</risk>
+		<description>The Anti-MIME-Sniffing header X-Content-Type-Options was not set to 'nosniff'</description>
+		<attack/>
+		<messageId>153</messageId>
+		<cweid>0</cweid>
+		<wascid>0</wascid>
+	</alert>
+	<alert type="set">
+		<other/>
+		<param/>
+		<alert>X-Frame-Options header not set</alert>
+		<evidence/>
+		<reliability>Warning</reliability>
+		<solution>Most modern Web browsers support the X-Frame-Options HTTP header, ensure it's set on all web pages returned by your site (if you expect the page to be framed only by pages on your server (e.g. it's part of a FRAMESET) then you'll want to use SAMEORIGIN,
+			otherwise if you never expect the page to be framed, you should use DENY).</solution>
+		<url>https://yandex.st/jquery/hotkeys/1.0.0/jquery.hotkeys.min.js</url>
+		<reference>http://blogs.msdn.com/b/ieinternals/archive/2010/03/30/combating-clickjacking-with-x-frame-options.aspx?Redirected=true</reference>
+		<id>130</id>
+		<risk>Informational</risk>
+		<description>X-Frame-Options header is not included in the HTTP response to protect against 'ClickJacking' attacks</description>
+		<attack/>
+		<messageId>153</messageId>
+		<cweid>0</cweid>
+		<wascid>0</wascid>
+	</alert>
+	<alert type="set">
+		<other/>
+		<param>max-age</param>
+		<alert>Incomplete or no cache-control and pragma HTTPHeader set</alert>
+		<evidence/>
+		<reliability>Warning</reliability>
+		<solution>Whenever possible ensure the cache-control HTTPHeader is set with no-cache, no-store, must-revalidate, private, and the pragma HTTPHeader is set with no-cache.</solution>
+		<url>http://site.com</url>
+		<reference>https://www.owasp.org/index.php/Session_Management_Cheat_Sheet#Web_Content_Caching</reference>
+		<id>131</id>
+		<risk>Low</risk>
+		<description>The cache-control and pragma HTTPHeader have not been set properly allowing the browser and proxies to cache content</description>
+		<attack>315360000</attack>
+		<messageId>154</messageId>
+		<cweid>0</cweid>
+		<wascid>0</wascid>
+	</alert>
+	<alert type="set">
+		<other/>
+		<param>public</param>
+		<alert>Incomplete or no cache-control and pragma HTTPHeader set</alert>
+		<evidence/>
+		<reliability>Warning</reliability>
+		<solution>Whenever possible ensure the cache-control HTTPHeader is set with no-cache, no-store, must-revalidate, private, and the pragma HTTPHeader is set with no-cache.</solution>
+		<url>http://site.com</url>
+		<reference>https://www.owasp.org/index.php/Session_Management_Cheat_Sheet#Web_Content_Caching</reference>
+		<id>132</id>
+		<risk>Low</risk>
+		<description>The cache-control and pragma HTTPHeader have not been set properly allowing the browser and proxies to cache content</description>
+		<attack/>
+		<messageId>154</messageId>
+		<cweid>0</cweid>
+		<wascid>0</wascid>
+	</alert>
+	<alert type="set">
+		<other/>
+		<param/>
+		<alert>X-Content-Type-Options header missing</alert>
+		<evidence/>
+		<reliability>Warning</reliability>
+		<solution>This check is specific to Internet Explorer 8 and Google Chrome. Ensure each page sets a Content-Type header and the X-CONTENT-TYPE-OPTIONS if the Content-Type header is unknown</solution>
+		<url>http://site.com</url>
+		<reference/>
+		<id>134</id>
+		<risk>Low</risk>
+		<description>The Anti-MIME-Sniffing header X-Content-Type-Options was not set to 'nosniff'</description>
+		<attack/>
+		<messageId>154</messageId>
+		<cweid>0</cweid>
+		<wascid>0</wascid>
+	</alert>
+	<alert type="set">
+		<other/>
+		<param/>
+		<alert>X-Frame-Options header not set</alert>
+		<evidence/>
+		<reliability>Warning</reliability>
+		<solution>Most modern Web browsers support the X-Frame-Options HTTP header, ensure it's set on all web pages returned by your site (if you expect the page to be framed only by pages on your server (e.g. it's part of a FRAMESET) then you'll want to use SAMEORIGIN,
+			otherwise if you never expect the page to be framed, you should use DENY).</solution>
+		<url>http://site.com</url>
+		<reference>http://blogs.msdn.com/b/ieinternals/archive/2010/03/30/combating-clickjacking-with-x-frame-options.aspx?Redirected=true</reference>
+		<id>135</id>
+		<risk>Informational</risk>
+		<description>X-Frame-Options header is not included in the HTTP response to protect against 'ClickJacking' attacks</description>
+		<attack/>
+		<messageId>154</messageId>
+		<cweid>0</cweid>
+		<wascid>0</wascid>
+	</alert>
+	<alert type="set">
+		<other/>
+		<param>public, max-age</param>
+		<alert>Incomplete or no cache-control and pragma HTTPHeader set</alert>
+		<evidence/>
+		<reliability>Warning</reliability>
+		<solution>Whenever possible ensure the cache-control HTTPHeader is set with no-cache, no-store, must-revalidate, private, and the pragma HTTPHeader is set with no-cache.</solution>
+		<url>https://ru-status.4game.com/?callback=ssjpc&amp;callback=ssjpc</url>
+		<reference>https://www.owasp.org/index.php/Session_Management_Cheat_Sheet#Web_Content_Caching</reference>
+		<id>136</id>
+		<risk>Low</risk>
+		<description>The cache-control and pragma HTTPHeader have not been set properly allowing the browser and proxies to cache content</description>
+		<attack>60</attack>
+		<messageId>155</messageId>
+		<cweid>0</cweid>
+		<wascid>0</wascid>
+	</alert>
+	<alert type="set">
+		<other/>
+		<param/>
+		<alert>X-Content-Type-Options header missing</alert>
+		<evidence/>
+		<reliability>Warning</reliability>
+		<solution>This check is specific to Internet Explorer 8 and Google Chrome. Ensure each page sets a Content-Type header and the X-CONTENT-TYPE-OPTIONS if the Content-Type header is unknown</solution>
+		<url>https://ru-status.4game.com/?callback=ssjpc&amp;callback=ssjpc</url>
+		<reference/>
+		<id>137</id>
+		<risk>Low</risk>
+		<description>The Anti-MIME-Sniffing header X-Content-Type-Options was not set to 'nosniff'</description>
+		<attack/>
+		<messageId>155</messageId>
+		<cweid>0</cweid>
+		<wascid>0</wascid>
+	</alert>
+	<alert type="set">
+		<other/>
+		<param/>
+		<alert>X-Frame-Options header not set</alert>
+		<evidence/>
+		<reliability>Warning</reliability>
+		<solution>Most modern Web browsers support the X-Frame-Options HTTP header, ensure it's set on all web pages returned by your site (if you expect the page to be framed only by pages on your server (e.g. it's part of a FRAMESET) then you'll want to use SAMEORIGIN,
+			otherwise if you never expect the page to be framed, you should use DENY).</solution>
+		<url>https://ru-status.4game.com/?callback=ssjpc&amp;callback=ssjpc</url>
+		<reference>http://blogs.msdn.com/b/ieinternals/archive/2010/03/30/combating-clickjacking-with-x-frame-options.aspx?Redirected=true</reference>
+		<id>138</id>
+		<risk>Informational</risk>
+		<description>X-Frame-Options header is not included in the HTTP response to protect against 'ClickJacking' attacks</description>
+		<attack/>
+		<messageId>155</messageId>
+		<cweid>0</cweid>
+		<wascid>0</wascid>
+	</alert>
+	<alert type="set">
+		<other/>
+		<param>max-age</param>
+		<alert>Incomplete or no cache-control and pragma HTTPHeader set</alert>
+		<evidence/>
+		<reliability>Warning</reliability>
+		<solution>Whenever possible ensure the cache-control HTTPHeader is set with no-cache, no-store, must-revalidate, private, and the pragma HTTPHeader is set with no-cache.</solution>
+		<url>http://site.com</url>
+		<reference>https://www.owasp.org/index.php/Session_Management_Cheat_Sheet#Web_Content_Caching</reference>
+		<id>139</id>
+		<risk>Low</risk>
+		<description>The cache-control and pragma HTTPHeader have not been set properly allowing the browser and proxies to cache content</description>
+		<attack>315360000</attack>
+		<messageId>156</messageId>
+		<cweid>0</cweid>
+		<wascid>0</wascid>
+	</alert>
+	<alert type="set">
+		<other/>
+		<param>public</param>
+		<alert>Incomplete or no cache-control and pragma HTTPHeader set</alert>
+		<evidence/>
+		<reliability>Warning</reliability>
+		<solution>Whenever possible ensure the cache-control HTTPHeader is set with no-cache, no-store, must-revalidate, private, and the pragma HTTPHeader is set with no-cache.</solution>
+		<url>http://site.com</url>
+		<reference>https://www.owasp.org/index.php/Session_Management_Cheat_Sheet#Web_Content_Caching</reference>
+		<id>140</id>
+		<risk>Low</risk>
+		<description>The cache-control and pragma HTTPHeader have not been set properly allowing the browser and proxies to cache content</description>
+		<attack/>
+		<messageId>156</messageId>
+		<cweid>0</cweid>
+		<wascid>0</wascid>
+	</alert>
+	<alert type="set">
+		<other/>
+		<param/>
+		<alert>X-Content-Type-Options header missing</alert>
+		<evidence/>
+		<reliability>Warning</reliability>
+		<solution>This check is specific to Internet Explorer 8 and Google Chrome. Ensure each page sets a Content-Type header and the X-CONTENT-TYPE-OPTIONS if the Content-Type header is unknown</solution>
+		<url>http://site.com</url>
+		<reference/>
+		<id>142</id>
+		<risk>Low</risk>
+		<description>The Anti-MIME-Sniffing header X-Content-Type-Options was not set to 'nosniff'</description>
+		<attack/>
+		<messageId>156</messageId>
+		<cweid>0</cweid>
+		<wascid>0</wascid>
+	</alert>
+	<alert type="set">
+		<other/>
+		<param/>
+		<alert>X-Frame-Options header not set</alert>
+		<evidence/>
+		<reliability>Warning</reliability>
+		<solution>Most modern Web browsers support the X-Frame-Options HTTP header, ensure it's set on all web pages returned by your site (if you expect the page to be framed only by pages on your server (e.g. it's part of a FRAMESET) then you'll want to use SAMEORIGIN,
+			otherwise if you never expect the page to be framed, you should use DENY).</solution>
+		<url>http://site.com</url>
+		<reference>http://blogs.msdn.com/b/ieinternals/archive/2010/03/30/combating-clickjacking-with-x-frame-options.aspx?Redirected=true</reference>
+		<id>143</id>
+		<risk>Informational</risk>
+		<description>X-Frame-Options header is not included in the HTTP response to protect against 'ClickJacking' attacks</description>
+		<attack/>
+		<messageId>156</messageId>
+		<cweid>0</cweid>
+		<wascid>0</wascid>
+	</alert>
+	<alert type="set">
+		<other/>
+		<param>no-cache</param>
+		<alert>Incomplete or no cache-control and pragma HTTPHeader set</alert>
+		<evidence/>
+		<reliability>Warning</reliability>
+		<solution>Whenever possible ensure the cache-control HTTPHeader is set with no-cache, no-store, must-revalidate, private, and the pragma HTTPHeader is set with no-cache.</solution>
+		<url>https://www.youtube.com/iframe_api</url>
+		<reference>https://www.owasp.org/index.php/Session_Management_Cheat_Sheet#Web_Content_Caching</reference>
+		<id>144</id>
+		<risk>Low</risk>
+		<description>The cache-control and pragma HTTPHeader have not been set properly allowing the browser and proxies to cache content</description>
+		<attack/>
+		<messageId>157</messageId>
+		<cweid>0</cweid>
+		<wascid>0</wascid>
+	</alert>
+	<alert type="set">
+		<other/>
+		<param>VISITOR_INFO1_LIVE</param>
+		<alert>Cookie set without HttpOnly flag</alert>
+		<evidence>VISITOR_INFO1_LIVE=rMt1Fv-0WkU; path=/; domain=.youtube.com; expires=Sun, 10-Aug-2014 21:59:24 GMT</evidence>
+		<reliability>Warning</reliability>
+		<solution>Ensure that the HttpOnly flag is set for all cookies.</solution>
+		<url>https://www.youtube.com/iframe_api</url>
+		<reference>www.owasp.org/index.php/HttpOnly</reference>
+		<id>145</id>
+		<risk>Low</risk>
+		<description>A cookie has been set without the HttpOnly flag, which means that the cookie can be accessed by JavaScript. If a malicious script can be run on this page then the cookie will be accessible and can be transmitted to another site. If this is a session
+			cookie then session hijacking may be possible.</description>
+		<attack>rMt1Fv-0WkU; path=/; domain=.youtube.com; expires=Sun, 10-Aug-2014 21:59:24 GMT</attack>
+		<messageId>157</messageId>
+		<cweid>0</cweid>
+		<wascid>13</wascid>
+	</alert>
+	<alert type="set">
+		<other/>
+		<param>VISITOR_INFO1_LIVE</param>
+		<alert>Cookie set without secure flag</alert>
+		<evidence>VISITOR_INFO1_LIVE=rMt1Fv-0WkU; path=/; domain=.youtube.com; expires=Sun, 10-Aug-2014 21:59:24 GMT</evidence>
+		<reliability>Warning</reliability>
+		<solution>Whenever a cookie contains sensitive information or is a session token, then it should always be passed using an encrypted tunnel. Ensure that the secure flag is set for cookies containing such sensitive information.</solution>
+		<url>https://www.youtube.com/iframe_api</url>
+		<reference>http://www.owasp.org/index.php/Testing_for_cookies_attributes_(OWASP-SM-002)</reference>
+		<id>146</id>
+		<risk>Low</risk>
+		<description>A cookie has been set without the secure flag, which means that the cookie can be accessed via unencrypted connections.</description>
+		<attack>rMt1Fv-0WkU; path=/; domain=.youtube.com; expires=Sun, 10-Aug-2014 21:59:24 GMT</attack>
+		<messageId>157</messageId>
+		<cweid>0</cweid>
+		<wascid>13</wascid>
+	</alert>
+	<alert type="set">
+		<other/>
+		<param>YSC</param>
+		<alert>Cookie set without secure flag</alert>
+		<evidence>YSC=BLrvcYzdPZg; path=/; domain=.youtube.com; httponly</evidence>
+		<reliability>Warning</reliability>
+		<solution>Whenever a cookie contains sensitive information or is a session token, then it should always be passed using an encrypted tunnel. Ensure that the secure flag is set for cookies containing such sensitive information.</solution>
+		<url>https://www.youtube.com/iframe_api</url>
+		<reference>http://www.owasp.org/index.php/Testing_for_cookies_attributes_(OWASP-SM-002)</reference>
+		<id>147</id>
+		<risk>Low</risk>
+		<description>A cookie has been set without the secure flag, which means that the cookie can be accessed via unencrypted connections.</description>
+		<attack>BLrvcYzdPZg; path=/; domain=.youtube.com; httponly</attack>
+		<messageId>157</messageId>
+		<cweid>0</cweid>
+		<wascid>13</wascid>
+	</alert>
+	<alert type="set">
+		<other/>
+		<param>max-age</param>
+		<alert>Incomplete or no cache-control and pragma HTTPHeader set</alert>
+		<evidence/>
+		<reliability>Warning</reliability>
+		<solution>Whenever possible ensure the cache-control HTTPHeader is set with no-cache, no-store, must-revalidate, private, and the pragma HTTPHeader is set with no-cache.</solution>
+		<url>http://site.com</url>
+		<reference>https://www.owasp.org/index.php/Session_Management_Cheat_Sheet#Web_Content_Caching</reference>
+		<id>148</id>
+		<risk>Low</risk>
+		<description>The cache-control and pragma HTTPHeader have not been set properly allowing the browser and proxies to cache content</description>
+		<attack>315360000</attack>
+		<messageId>160</messageId>
+		<cweid>0</cweid>
+		<wascid>0</wascid>
+	</alert>
+	<alert type="set">
+		<other/>
+		<param>public</param>
+		<alert>Incomplete or no cache-control and pragma HTTPHeader set</alert>
+		<evidence/>
+		<reliability>Warning</reliability>
+		<solution>Whenever possible ensure the cache-control HTTPHeader is set with no-cache, no-store, must-revalidate, private, and the pragma HTTPHeader is set with no-cache.</solution>
+		<url>http://site.com</url>
+		<reference>https://www.owasp.org/index.php/Session_Management_Cheat_Sheet#Web_Content_Caching</reference>
+		<id>149</id>
+		<risk>Low</risk>
+		<description>The cache-control and pragma HTTPHeader have not been set properly allowing the browser and proxies to cache content</description>
+		<attack/>
+		<messageId>160</messageId>
+		<cweid>0</cweid>
+		<wascid>0</wascid>
+	</alert>
+	<alert type="set">
+		<other/>
+		<param/>
+		<alert>X-Content-Type-Options header missing</alert>
+		<evidence/>
+		<reliability>Warning</reliability>
+		<solution>This check is specific to Internet Explorer 8 and Google Chrome. Ensure each page sets a Content-Type header and the X-CONTENT-TYPE-OPTIONS if the Content-Type header is unknown</solution>
+		<url>http://site.com</url>
+		<reference/>
+		<id>151</id>
+		<risk>Low</risk>
+		<description>The Anti-MIME-Sniffing header X-Content-Type-Options was not set to 'nosniff'</description>
+		<attack/>
+		<messageId>160</messageId>
+		<cweid>0</cweid>
+		<wascid>0</wascid>
+	</alert>
+	<alert type="set">
+		<other/>
+		<param/>
+		<alert>X-Frame-Options header not set</alert>
+		<evidence/>
+		<reliability>Warning</reliability>
+		<solution>Most modern Web browsers support the X-Frame-Options HTTP header, ensure it's set on all web pages returned by your site (if you expect the page to be framed only by pages on your server (e.g. it's part of a FRAMESET) then you'll want to use SAMEORIGIN,
+			otherwise if you never expect the page to be framed, you should use DENY).</solution>
+		<url>http://site.com</url>
+		<reference>http://blogs.msdn.com/b/ieinternals/archive/2010/03/30/combating-clickjacking-with-x-frame-options.aspx?Redirected=true</reference>
+		<id>152</id>
+		<risk>Informational</risk>
+		<description>X-Frame-Options header is not included in the HTTP response to protect against 'ClickJacking' attacks</description>
+		<attack/>
+		<messageId>160</messageId>
+		<cweid>0</cweid>
+		<wascid>0</wascid>
+	</alert>
+	<alert type="set">
+		<other/>
+		<param>max-age</param>
+		<alert>Incomplete or no cache-control and pragma HTTPHeader set</alert>
+		<evidence/>
+		<reliability>Warning</reliability>
+		<solution>Whenever possible ensure the cache-control HTTPHeader is set with no-cache, no-store, must-revalidate, private, and the pragma HTTPHeader is set with no-cache.</solution>
+		<url>http://site.com</url>
+		<reference>https://www.owasp.org/index.php/Session_Management_Cheat_Sheet#Web_Content_Caching</reference>
+		<id>153</id>
+		<risk>Low</risk>
+		<description>The cache-control and pragma HTTPHeader have not been set properly allowing the browser and proxies to cache content</description>
+		<attack>315360000</attack>
+		<messageId>161</messageId>
+		<cweid>0</cweid>
+		<wascid>0</wascid>
+	</alert>
+	<alert type="set">
+		<other/>
+		<param>public</param>
+		<alert>Incomplete or no cache-control and pragma HTTPHeader set</alert>
+		<evidence/>
+		<reliability>Warning</reliability>
+		<solution>Whenever possible ensure the cache-control HTTPHeader is set with no-cache, no-store, must-revalidate, private, and the pragma HTTPHeader is set with no-cache.</solution>
+		<url>http://site.com</url>
+		<reference>https://www.owasp.org/index.php/Session_Management_Cheat_Sheet#Web_Content_Caching</reference>
+		<id>154</id>
+		<risk>Low</risk>
+		<description>The cache-control and pragma HTTPHeader have not been set properly allowing the browser and proxies to cache content</description>
+		<attack/>
+		<messageId>161</messageId>
+		<cweid>0</cweid>
+		<wascid>0</wascid>
+	</alert>
+	<alert type="set">
+		<other/>
+		<param/>
+		<alert>X-Content-Type-Options header missing</alert>
+		<evidence/>
+		<reliability>Warning</reliability>
+		<solution>This check is specific to Internet Explorer 8 and Google Chrome. Ensure each page sets a Content-Type header and the X-CONTENT-TYPE-OPTIONS if the Content-Type header is unknown</solution>
+		<url>http://site.com</url>
+		<reference/>
+		<id>156</id>
+		<risk>Low</risk>
+		<description>The Anti-MIME-Sniffing header X-Content-Type-Options was not set to 'nosniff'</description>
+		<attack/>
+		<messageId>161</messageId>
+		<cweid>0</cweid>
+		<wascid>0</wascid>
+	</alert>
+	<alert type="set">
+		<other/>
+		<param/>
+		<alert>X-Frame-Options header not set</alert>
+		<evidence/>
+		<reliability>Warning</reliability>
+		<solution>Most modern Web browsers support the X-Frame-Options HTTP header, ensure it's set on all web pages returned by your site (if you expect the page to be framed only by pages on your server (e.g. it's part of a FRAMESET) then you'll want to use SAMEORIGIN,
+			otherwise if you never expect the page to be framed, you should use DENY).</solution>
+		<url>http://site.com</url>
+		<reference>http://blogs.msdn.com/b/ieinternals/archive/2010/03/30/combating-clickjacking-with-x-frame-options.aspx?Redirected=true</reference>
+		<id>157</id>
+		<risk>Informational</risk>
+		<description>X-Frame-Options header is not included in the HTTP response to protect against 'ClickJacking' attacks</description>
+		<attack/>
+		<messageId>161</messageId>
+		<cweid>0</cweid>
+		<wascid>0</wascid>
+	</alert>
+	<alert type="set">
+		<other/>
+		<param>max-age</param>
+		<alert>Incomplete or no cache-control and pragma HTTPHeader set</alert>
+		<evidence/>
+		<reliability>Warning</reliability>
+		<solution>Whenever possible ensure the cache-control HTTPHeader is set with no-cache, no-store, must-revalidate, private, and the pragma HTTPHeader is set with no-cache.</solution>
+		<url>http://site.com</url>
+		<reference>https://www.owasp.org/index.php/Session_Management_Cheat_Sheet#Web_Content_Caching</reference>
+		<id>158</id>
+		<risk>Low</risk>
+		<description>The cache-control and pragma HTTPHeader have not been set properly allowing the browser and proxies to cache content</description>
+		<attack>315360000</attack>
+		<messageId>162</messageId>
+		<cweid>0</cweid>
+		<wascid>0</wascid>
+	</alert>
+	<alert type="set">
+		<other/>
+		<param>public</param>
+		<alert>Incomplete or no cache-control and pragma HTTPHeader set</alert>
+		<evidence/>
+		<reliability>Warning</reliability>
+		<solution>Whenever possible ensure the cache-control HTTPHeader is set with no-cache, no-store, must-revalidate, private, and the pragma HTTPHeader is set with no-cache.</solution>
+		<url>http://site.com</url>
+		<reference>https://www.owasp.org/index.php/Session_Management_Cheat_Sheet#Web_Content_Caching</reference>
+		<id>159</id>
+		<risk>Low</risk>
+		<description>The cache-control and pragma HTTPHeader have not been set properly allowing the browser and proxies to cache content</description>
+		<attack/>
+		<messageId>162</messageId>
+		<cweid>0</cweid>
+		<wascid>0</wascid>
+	</alert>
+	<alert type="set">
+		<other/>
+		<param/>
+		<alert>X-Content-Type-Options header missing</alert>
+		<evidence/>
+		<reliability>Warning</reliability>
+		<solution>This check is specific to Internet Explorer 8 and Google Chrome. Ensure each page sets a Content-Type header and the X-CONTENT-TYPE-OPTIONS if the Content-Type header is unknown</solution>
+		<url>http://site.com</url>
+		<reference/>
+		<id>161</id>
+		<risk>Low</risk>
+		<description>The Anti-MIME-Sniffing header X-Content-Type-Options was not set to 'nosniff'</description>
+		<attack/>
+		<messageId>162</messageId>
+		<cweid>0</cweid>
+		<wascid>0</wascid>
+	</alert>
+	<alert type="set">
+		<other/>
+		<param/>
+		<alert>X-Frame-Options header not set</alert>
+		<evidence/>
+		<reliability>Warning</reliability>
+		<solution>Most modern Web browsers support the X-Frame-Options HTTP header, ensure it's set on all web pages returned by your site (if you expect the page to be framed only by pages on your server (e.g. it's part of a FRAMESET) then you'll want to use SAMEORIGIN,
+			otherwise if you never expect the page to be framed, you should use DENY).</solution>
+		<url>http://site.com</url>
+		<reference>http://blogs.msdn.com/b/ieinternals/archive/2010/03/30/combating-clickjacking-with-x-frame-options.aspx?Redirected=true</reference>
+		<id>162</id>
+		<risk>Informational</risk>
+		<description>X-Frame-Options header is not included in the HTTP response to protect against 'ClickJacking' attacks</description>
+		<attack/>
+		<messageId>162</messageId>
+		<cweid>0</cweid>
+		<wascid>0</wascid>
+	</alert>
+	<alert type="set">
+		<other/>
+		<param>public, max-age</param>
+		<alert>Incomplete or no cache-control and pragma HTTPHeader set</alert>
+		<evidence/>
+		<reliability>Warning</reliability>
+		<solution>Whenever possible ensure the cache-control HTTPHeader is set with no-cache, no-store, must-revalidate, private, and the pragma HTTPHeader is set with no-cache.</solution>
+		<url>https://ssl.gstatic.com/fonts/roboto/v9/grlryt2bdKIyfMSOhzd1eA.woff</url>
+		<reference>https://www.owasp.org/index.php/Session_Management_Cheat_Sheet#Web_Content_Caching</reference>
+		<id>163</id>
+		<risk>Low</risk>
+		<description>The cache-control and pragma HTTPHeader have not been set properly allowing the browser and proxies to cache content</description>
+		<attack>31536000</attack>
+		<messageId>163</messageId>
+		<cweid>0</cweid>
+		<wascid>0</wascid>
+	</alert>
+	<alert type="set">
+		<other/>
+		<param>max-age</param>
+		<alert>Incomplete or no cache-control and pragma HTTPHeader set</alert>
+		<evidence/>
+		<reliability>Warning</reliability>
+		<solution>Whenever possible ensure the cache-control HTTPHeader is set with no-cache, no-store, must-revalidate, private, and the pragma HTTPHeader is set with no-cache.</solution>
+		<url>http://site.com</url>
+		<reference>https://www.owasp.org/index.php/Session_Management_Cheat_Sheet#Web_Content_Caching</reference>
+		<id>164</id>
+		<risk>Low</risk>
+		<description>The cache-control and pragma HTTPHeader have not been set properly allowing the browser and proxies to cache content</description>
+		<attack>315360000</attack>
+		<messageId>165</messageId>
+		<cweid>0</cweid>
+		<wascid>0</wascid>
+	</alert>
+	<alert type="set">
+		<other/>
+		<param>public</param>
+		<alert>Incomplete or no cache-control and pragma HTTPHeader set</alert>
+		<evidence/>
+		<reliability>Warning</reliability>
+		<solution>Whenever possible ensure the cache-control HTTPHeader is set with no-cache, no-store, must-revalidate, private, and the pragma HTTPHeader is set with no-cache.</solution>
+		<url>http://site.com</url>
+		<reference>https://www.owasp.org/index.php/Session_Management_Cheat_Sheet#Web_Content_Caching</reference>
+		<id>165</id>
+		<risk>Low</risk>
+		<description>The cache-control and pragma HTTPHeader have not been set properly allowing the browser and proxies to cache content</description>
+		<attack/>
+		<messageId>165</messageId>
+		<cweid>0</cweid>
+		<wascid>0</wascid>
+	</alert>
+	<alert type="set">
+		<other/>
+		<param/>
+		<alert>X-Content-Type-Options header missing</alert>
+		<evidence/>
+		<reliability>Warning</reliability>
+		<solution>This check is specific to Internet Explorer 8 and Google Chrome. Ensure each page sets a Content-Type header and the X-CONTENT-TYPE-OPTIONS if the Content-Type header is unknown</solution>
+		<url>http://site.com</url>
+		<reference/>
+		<id>167</id>
+		<risk>Low</risk>
+		<description>The Anti-MIME-Sniffing header X-Content-Type-Options was not set to 'nosniff'</description>
+		<attack/>
+		<messageId>165</messageId>
+		<cweid>0</cweid>
+		<wascid>0</wascid>
+	</alert>
+	<alert type="set">
+		<other/>
+		<param/>
+		<alert>X-Frame-Options header not set</alert>
+		<evidence/>
+		<reliability>Warning</reliability>
+		<solution>Most modern Web browsers support the X-Frame-Options HTTP header, ensure it's set on all web pages returned by your site (if you expect the page to be framed only by pages on your server (e.g. it's part of a FRAMESET) then you'll want to use SAMEORIGIN,
+			otherwise if you never expect the page to be framed, you should use DENY).</solution>
+		<url>http://site.com</url>
+		<reference>http://blogs.msdn.com/b/ieinternals/archive/2010/03/30/combating-clickjacking-with-x-frame-options.aspx?Redirected=true</reference>
+		<id>168</id>
+		<risk>Informational</risk>
+		<description>X-Frame-Options header is not included in the HTTP response to protect against 'ClickJacking' attacks</description>
+		<attack/>
+		<messageId>165</messageId>
+		<cweid>0</cweid>
+		<wascid>0</wascid>
+	</alert>
+	<alert type="set">
+		<other/>
+		<param>public, max-age</param>
+		<alert>Incomplete or no cache-control and pragma HTTPHeader set</alert>
+		<evidence/>
+		<reliability>Warning</reliability>
+		<solution>Whenever possible ensure the cache-control HTTPHeader is set with no-cache, no-store, must-revalidate, private, and the pragma HTTPHeader is set with no-cache.</solution>
+		<url>https://platform.twitter.com/widgets.js</url>
+		<reference>https://www.owasp.org/index.php/Session_Management_Cheat_Sheet#Web_Content_Caching</reference>
+		<id>169</id>
+		<risk>Low</risk>
+		<description>The cache-control and pragma HTTPHeader have not been set properly allowing the browser and proxies to cache content</description>
+		<attack>1800</attack>
+		<messageId>166</messageId>
+		<cweid>0</cweid>
+		<wascid>0</wascid>
+	</alert>
+	<alert type="set">
+		<other/>
+		<param/>
+		<alert>X-Content-Type-Options header missing</alert>
+		<evidence/>
+		<reliability>Warning</reliability>
+		<solution>This check is specific to Internet Explorer 8 and Google Chrome. Ensure each page sets a Content-Type header and the X-CONTENT-TYPE-OPTIONS if the Content-Type header is unknown</solution>
+		<url>https://platform.twitter.com/widgets.js</url>
+		<reference/>
+		<id>170</id>
+		<risk>Low</risk>
+		<description>The Anti-MIME-Sniffing header X-Content-Type-Options was not set to 'nosniff'</description>
+		<attack/>
+		<messageId>166</messageId>
+		<cweid>0</cweid>
+		<wascid>0</wascid>
+	</alert>
+	<alert type="set">
+		<other/>
+		<param/>
+		<alert>X-Frame-Options header not set</alert>
+		<evidence/>
+		<reliability>Warning</reliability>
+		<solution>Most modern Web browsers support the X-Frame-Options HTTP header, ensure it's set on all web pages returned by your site (if you expect the page to be framed only by pages on your server (e.g. it's part of a FRAMESET) then you'll want to use SAMEORIGIN,
+			otherwise if you never expect the page to be framed, you should use DENY).</solution>
+		<url>https://platform.twitter.com/widgets.js</url>
+		<reference>http://blogs.msdn.com/b/ieinternals/archive/2010/03/30/combating-clickjacking-with-x-frame-options.aspx?Redirected=true</reference>
+		<id>171</id>
+		<risk>Informational</risk>
+		<description>X-Frame-Options header is not included in the HTTP response to protect against 'ClickJacking' attacks</description>
+		<attack/>
+		<messageId>166</messageId>
+		<cweid>0</cweid>
+		<wascid>0</wascid>
+	</alert>
+	<alert type="set">
+		<other/>
+		<param>max-age</param>
+		<alert>Incomplete or no cache-control and pragma HTTPHeader set</alert>
+		<evidence/>
+		<reliability>Warning</reliability>
+		<solution>Whenever possible ensure the cache-control HTTPHeader is set with no-cache, no-store, must-revalidate, private, and the pragma HTTPHeader is set with no-cache.</solution>
+		<url>http://site.com</url>
+		<reference>https://www.owasp.org/index.php/Session_Management_Cheat_Sheet#Web_Content_Caching</reference>
+		<id>172</id>
+		<risk>Low</risk>
+		<description>The cache-control and pragma HTTPHeader have not been set properly allowing the browser and proxies to cache content</description>
+		<attack>315360000</attack>
+		<messageId>167</messageId>
+		<cweid>0</cweid>
+		<wascid>0</wascid>
+	</alert>
+	<alert type="set">
+		<other/>
+		<param>public</param>
+		<alert>Incomplete or no cache-control and pragma HTTPHeader set</alert>
+		<evidence/>
+		<reliability>Warning</reliability>
+		<solution>Whenever possible ensure the cache-control HTTPHeader is set with no-cache, no-store, must-revalidate, private, and the pragma HTTPHeader is set with no-cache.</solution>
+		<url>http://site.com</url>
+		<reference>https://www.owasp.org/index.php/Session_Management_Cheat_Sheet#Web_Content_Caching</reference>
+		<id>173</id>
+		<risk>Low</risk>
+		<description>The cache-control and pragma HTTPHeader have not been set properly allowing the browser and proxies to cache content</description>
+		<attack/>
+		<messageId>167</messageId>
+		<cweid>0</cweid>
+		<wascid>0</wascid>
+	</alert>
+	<alert type="set">
+		<other/>
+		<param/>
+		<alert>X-Content-Type-Options header missing</alert>
+		<evidence/>
+		<reliability>Warning</reliability>
+		<solution>This check is specific to Internet Explorer 8 and Google Chrome. Ensure each page sets a Content-Type header and the X-CONTENT-TYPE-OPTIONS if the Content-Type header is unknown</solution>
+		<url>http://site.com</url>
+		<reference/>
+		<id>175</id>
+		<risk>Low</risk>
+		<description>The Anti-MIME-Sniffing header X-Content-Type-Options was not set to 'nosniff'</description>
+		<attack/>
+		<messageId>167</messageId>
+		<cweid>0</cweid>
+		<wascid>0</wascid>
+	</alert>
+	<alert type="set">
+		<other/>
+		<param/>
+		<alert>X-Frame-Options header not set</alert>
+		<evidence/>
+		<reliability>Warning</reliability>
+		<solution>Most modern Web browsers support the X-Frame-Options HTTP header, ensure it's set on all web pages returned by your site (if you expect the page to be framed only by pages on your server (e.g. it's part of a FRAMESET) then you'll want to use SAMEORIGIN,
+			otherwise if you never expect the page to be framed, you should use DENY).</solution>
+		<url>http://site.com</url>
+		<reference>http://blogs.msdn.com/b/ieinternals/archive/2010/03/30/combating-clickjacking-with-x-frame-options.aspx?Redirected=true</reference>
+		<id>176</id>
+		<risk>Informational</risk>
+		<description>X-Frame-Options header is not included in the HTTP response to protect against 'ClickJacking' attacks</description>
+		<attack/>
+		<messageId>167</messageId>
+		<cweid>0</cweid>
+		<wascid>0</wascid>
+	</alert>
+	<alert type="set">
+		<other/>
+		<param>max-age</param>
+		<alert>Incomplete or no cache-control and pragma HTTPHeader set</alert>
+		<evidence/>
+		<reliability>Warning</reliability>
+		<solution>Whenever possible ensure the cache-control HTTPHeader is set with no-cache, no-store, must-revalidate, private, and the pragma HTTPHeader is set with no-cache.</solution>
+		<url>http://site.com</url>
+		<reference>https://www.owasp.org/index.php/Session_Management_Cheat_Sheet#Web_Content_Caching</reference>
+		<id>177</id>
+		<risk>Low</risk>
+		<description>The cache-control and pragma HTTPHeader have not been set properly allowing the browser and proxies to cache content</description>
+		<attack>315360000</attack>
+		<messageId>168</messageId>
+		<cweid>0</cweid>
+		<wascid>0</wascid>
+	</alert>
+	<alert type="set">
+		<other/>
+		<param>public</param>
+		<alert>Incomplete or no cache-control and pragma HTTPHeader set</alert>
+		<evidence/>
+		<reliability>Warning</reliability>
+		<solution>Whenever possible ensure the cache-control HTTPHeader is set with no-cache, no-store, must-revalidate, private, and the pragma HTTPHeader is set with no-cache.</solution>
+		<url>http://site.com</url>
+		<reference>https://www.owasp.org/index.php/Session_Management_Cheat_Sheet#Web_Content_Caching</reference>
+		<id>178</id>
+		<risk>Low</risk>
+		<description>The cache-control and pragma HTTPHeader have not been set properly allowing the browser and proxies to cache content</description>
+		<attack/>
+		<messageId>168</messageId>
+		<cweid>0</cweid>
+		<wascid>0</wascid>
+	</alert>
+	<alert type="set">
+		<other/>
+		<param/>
+		<alert>X-Content-Type-Options header missing</alert>
+		<evidence/>
+		<reliability>Warning</reliability>
+		<solution>This check is specific to Internet Explorer 8 and Google Chrome. Ensure each page sets a Content-Type header and the X-CONTENT-TYPE-OPTIONS if the Content-Type header is unknown</solution>
+		<url>http://site.com</url>
+		<reference/>
+		<id>180</id>
+		<risk>Low</risk>
+		<description>The Anti-MIME-Sniffing header X-Content-Type-Options was not set to 'nosniff'</description>
+		<attack/>
+		<messageId>168</messageId>
+		<cweid>0</cweid>
+		<wascid>0</wascid>
+	</alert>
+	<alert type="set">
+		<other/>
+		<param/>
+		<alert>X-Frame-Options header not set</alert>
+		<evidence/>
+		<reliability>Warning</reliability>
+		<solution>Most modern Web browsers support the X-Frame-Options HTTP header, ensure it's set on all web pages returned by your site (if you expect the page to be framed only by pages on your server (e.g. it's part of a FRAMESET) then you'll want to use SAMEORIGIN,
+			otherwise if you never expect the page to be framed, you should use DENY).</solution>
+		<url>http://site.com</url>
+		<reference>http://blogs.msdn.com/b/ieinternals/archive/2010/03/30/combating-clickjacking-with-x-frame-options.aspx?Redirected=true</reference>
+		<id>181</id>
+		<risk>Informational</risk>
+		<description>X-Frame-Options header is not included in the HTTP response to protect against 'ClickJacking' attacks</description>
+		<attack/>
+		<messageId>168</messageId>
+		<cweid>0</cweid>
+		<wascid>0</wascid>
+	</alert>
+	<alert type="set">
+		<other/>
+		<param>max-age</param>
+		<alert>Incomplete or no cache-control and pragma HTTPHeader set</alert>
+		<evidence/>
+		<reliability>Warning</reliability>
+		<solution>Whenever possible ensure the cache-control HTTPHeader is set with no-cache, no-store, must-revalidate, private, and the pragma HTTPHeader is set with no-cache.</solution>
+		<url>http://site.com</url>
+		<reference>https://www.owasp.org/index.php/Session_Management_Cheat_Sheet#Web_Content_Caching</reference>
+		<id>182</id>
+		<risk>Low</risk>
+		<description>The cache-control and pragma HTTPHeader have not been set properly allowing the browser and proxies to cache content</description>
+		<attack>315360000</attack>
+		<messageId>169</messageId>
+		<cweid>0</cweid>
+		<wascid>0</wascid>
+	</alert>
+	<alert type="set">
+		<other/>
+		<param>public</param>
+		<alert>Incomplete or no cache-control and pragma HTTPHeader set</alert>
+		<evidence/>
+		<reliability>Warning</reliability>
+		<solution>Whenever possible ensure the cache-control HTTPHeader is set with no-cache, no-store, must-revalidate, private, and the pragma HTTPHeader is set with no-cache.</solution>
+		<url>http://site.com</url>
+		<reference>https://www.owasp.org/index.php/Session_Management_Cheat_Sheet#Web_Content_Caching</reference>
+		<id>183</id>
+		<risk>Low</risk>
+		<description>The cache-control and pragma HTTPHeader have not been set properly allowing the browser and proxies to cache content</description>
+		<attack/>
+		<messageId>169</messageId>
+		<cweid>0</cweid>
+		<wascid>0</wascid>
+	</alert>
+	<alert type="set">
+		<other/>
+		<param/>
+		<alert>X-Content-Type-Options header missing</alert>
+		<evidence/>
+		<reliability>Warning</reliability>
+		<solution>This check is specific to Internet Explorer 8 and Google Chrome. Ensure each page sets a Content-Type header and the X-CONTENT-TYPE-OPTIONS if the Content-Type header is unknown</solution>
+		<url>http://site.com</url>
+		<reference/>
+		<id>185</id>
+		<risk>Low</risk>
+		<description>The Anti-MIME-Sniffing header X-Content-Type-Options was not set to 'nosniff'</description>
+		<attack/>
+		<messageId>169</messageId>
+		<cweid>0</cweid>
+		<wascid>0</wascid>
+	</alert>
+	<alert type="set">
+		<other/>
+		<param/>
+		<alert>X-Frame-Options header not set</alert>
+		<evidence/>
+		<reliability>Warning</reliability>
+		<solution>Most modern Web browsers support the X-Frame-Options HTTP header, ensure it's set on all web pages returned by your site (if you expect the page to be framed only by pages on your server (e.g. it's part of a FRAMESET) then you'll want to use SAMEORIGIN,
+			otherwise if you never expect the page to be framed, you should use DENY).</solution>
+		<url>http://site.com</url>
+		<reference>http://blogs.msdn.com/b/ieinternals/archive/2010/03/30/combating-clickjacking-with-x-frame-options.aspx?Redirected=true</reference>
+		<id>186</id>
+		<risk>Informational</risk>
+		<description>X-Frame-Options header is not included in the HTTP response to protect against 'ClickJacking' attacks</description>
+		<attack/>
+		<messageId>169</messageId>
+		<cweid>0</cweid>
+		<wascid>0</wascid>
+	</alert>
+	<alert type="set">
+		<other/>
+		<param/>
+		<alert>X-Content-Type-Options header missing</alert>
+		<evidence/>
+		<reliability>Warning</reliability>
+		<solution>This check is specific to Internet Explorer 8 and Google Chrome. Ensure each page sets a Content-Type header and the X-CONTENT-TYPE-OPTIONS if the Content-Type header is unknown</solution>
+		<url>https://platform.twitter.com/embed/timeline.633fdd7a8cbe780bedb23434c948fe33.default.css</url>
+		<reference/>
+		<id>187</id>
+		<risk>Low</risk>
+		<description>The Anti-MIME-Sniffing header X-Content-Type-Options was not set to 'nosniff'</description>
+		<attack/>
+		<messageId>172</messageId>
+		<cweid>0</cweid>
+		<wascid>0</wascid>
+	</alert>
+	<alert type="set">
+		<other/>
+		<param/>
+		<alert>X-Frame-Options header not set</alert>
+		<evidence/>
+		<reliability>Warning</reliability>
+		<solution>Most modern Web browsers support the X-Frame-Options HTTP header, ensure it's set on all web pages returned by your site (if you expect the page to be framed only by pages on your server (e.g. it's part of a FRAMESET) then you'll want to use SAMEORIGIN,
+			otherwise if you never expect the page to be framed, you should use DENY).</solution>
+		<url>https://platform.twitter.com/embed/timeline.633fdd7a8cbe780bedb23434c948fe33.default.css</url>
+		<reference>http://blogs.msdn.com/b/ieinternals/archive/2010/03/30/combating-clickjacking-with-x-frame-options.aspx?Redirected=true</reference>
+		<id>188</id>
+		<risk>Informational</risk>
+		<description>X-Frame-Options header is not included in the HTTP response to protect against 'ClickJacking' attacks</description>
+		<attack/>
+		<messageId>172</messageId>
+		<cweid>0</cweid>
+		<wascid>0</wascid>
+	</alert>
+	<alert type="set">
+		<other/>
+		<param>max-age</param>
+		<alert>Incomplete or no cache-control and pragma HTTPHeader set</alert>
+		<evidence/>
+		<reliability>Warning</reliability>
+		<solution>Whenever possible ensure the cache-control HTTPHeader is set with no-cache, no-store, must-revalidate, private, and the pragma HTTPHeader is set with no-cache.</solution>
+		<url>http://site.com</url>
+		<reference>https://www.owasp.org/index.php/Session_Management_Cheat_Sheet#Web_Content_Caching</reference>
+		<id>189</id>
+		<risk>Low</risk>
+		<description>The cache-control and pragma HTTPHeader have not been set properly allowing the browser and proxies to cache content</description>
+		<attack>315360000</attack>
+		<messageId>174</messageId>
+		<cweid>0</cweid>
+		<wascid>0</wascid>
+	</alert>
+	<alert type="set">
+		<other/>
+		<param>public</param>
+		<alert>Incomplete or no cache-control and pragma HTTPHeader set</alert>
+		<evidence/>
+		<reliability>Warning</reliability>
+		<solution>Whenever possible ensure the cache-control HTTPHeader is set with no-cache, no-store, must-revalidate, private, and the pragma HTTPHeader is set with no-cache.</solution>
+		<url>http://site.com</url>
+		<reference>https://www.owasp.org/index.php/Session_Management_Cheat_Sheet#Web_Content_Caching</reference>
+		<id>190</id>
+		<risk>Low</risk>
+		<description>The cache-control and pragma HTTPHeader have not been set properly allowing the browser and proxies to cache content</description>
+		<attack/>
+		<messageId>174</messageId>
+		<cweid>0</cweid>
+		<wascid>0</wascid>
+	</alert>
+	<alert type="set">
+		<other/>
+		<param/>
+		<alert>X-Content-Type-Options header missing</alert>
+		<evidence/>
+		<reliability>Warning</reliability>
+		<solution>This check is specific to Internet Explorer 8 and Google Chrome. Ensure each page sets a Content-Type header and the X-CONTENT-TYPE-OPTIONS if the Content-Type header is unknown</solution>
+		<url>http://site.com</url>
+		<reference/>
+		<id>192</id>
+		<risk>Low</risk>
+		<description>The Anti-MIME-Sniffing header X-Content-Type-Options was not set to 'nosniff'</description>
+		<attack/>
+		<messageId>174</messageId>
+		<cweid>0</cweid>
+		<wascid>0</wascid>
+	</alert>
+	<alert type="set">
+		<other/>
+		<param/>
+		<alert>X-Frame-Options header not set</alert>
+		<evidence/>
+		<reliability>Warning</reliability>
+		<solution>Most modern Web browsers support the X-Frame-Options HTTP header, ensure it's set on all web pages returned by your site (if you expect the page to be framed only by pages on your server (e.g. it's part of a FRAMESET) then you'll want to use SAMEORIGIN,
+			otherwise if you never expect the page to be framed, you should use DENY).</solution>
+		<url>http://site.com</url>
+		<reference>http://blogs.msdn.com/b/ieinternals/archive/2010/03/30/combating-clickjacking-with-x-frame-options.aspx?Redirected=true</reference>
+		<id>193</id>
+		<risk>Informational</risk>
+		<description>X-Frame-Options header is not included in the HTTP response to protect against 'ClickJacking' attacks</description>
+		<attack/>
+		<messageId>174</messageId>
+		<cweid>0</cweid>
+		<wascid>0</wascid>
+	</alert>
+	<alert type="set">
+		<other/>
+		<param>max-age</param>
+		<alert>Incomplete or no cache-control and pragma HTTPHeader set</alert>
+		<evidence/>
+		<reliability>Warning</reliability>
+		<solution>Whenever possible ensure the cache-control HTTPHeader is set with no-cache, no-store, must-revalidate, private, and the pragma HTTPHeader is set with no-cache.</solution>
+		<url>http://site.com</url>
+		<reference>https://www.owasp.org/index.php/Session_Management_Cheat_Sheet#Web_Content_Caching</reference>
+		<id>194</id>
+		<risk>Low</risk>
+		<description>The cache-control and pragma HTTPHeader have not been set properly allowing the browser and proxies to cache content</description>
+		<attack>315360000</attack>
+		<messageId>175</messageId>
+		<cweid>0</cweid>
+		<wascid>0</wascid>
+	</alert>
+	<alert type="set">
+		<other/>
+		<param>public</param>
+		<alert>Incomplete or no cache-control and pragma HTTPHeader set</alert>
+		<evidence/>
+		<reliability>Warning</reliability>
+		<solution>Whenever possible ensure the cache-control HTTPHeader is set with no-cache, no-store, must-revalidate, private, and the pragma HTTPHeader is set with no-cache.</solution>
+		<url>http://site.com</url>
+		<reference>https://www.owasp.org/index.php/Session_Management_Cheat_Sheet#Web_Content_Caching</reference>
+		<id>195</id>
+		<risk>Low</risk>
+		<description>The cache-control and pragma HTTPHeader have not been set properly allowing the browser and proxies to cache content</description>
+		<attack/>
+		<messageId>175</messageId>
+		<cweid>0</cweid>
+		<wascid>0</wascid>
+	</alert>
+	<alert type="set">
+		<other/>
+		<param/>
+		<alert>X-Content-Type-Options header missing</alert>
+		<evidence/>
+		<reliability>Warning</reliability>
+		<solution>This check is specific to Internet Explorer 8 and Google Chrome. Ensure each page sets a Content-Type header and the X-CONTENT-TYPE-OPTIONS if the Content-Type header is unknown</solution>
+		<url>http://site.com</url>
+		<reference/>
+		<id>197</id>
+		<risk>Low</risk>
+		<description>The Anti-MIME-Sniffing header X-Content-Type-Options was not set to 'nosniff'</description>
+		<attack/>
+		<messageId>175</messageId>
+		<cweid>0</cweid>
+		<wascid>0</wascid>
+	</alert>
+	<alert type="set">
+		<other/>
+		<param/>
+		<alert>X-Frame-Options header not set</alert>
+		<evidence/>
+		<reliability>Warning</reliability>
+		<solution>Most modern Web browsers support the X-Frame-Options HTTP header, ensure it's set on all web pages returned by your site (if you expect the page to be framed only by pages on your server (e.g. it's part of a FRAMESET) then you'll want to use SAMEORIGIN,
+			otherwise if you never expect the page to be framed, you should use DENY).</solution>
+		<url>http://site.com</url>
+		<reference>http://blogs.msdn.com/b/ieinternals/archive/2010/03/30/combating-clickjacking-with-x-frame-options.aspx?Redirected=true</reference>
+		<id>198</id>
+		<risk>Informational</risk>
+		<description>X-Frame-Options header is not included in the HTTP response to protect against 'ClickJacking' attacks</description>
+		<attack/>
+		<messageId>175</messageId>
+		<cweid>0</cweid>
+		<wascid>0</wascid>
+	</alert>
+	<alert type="set">
+		<other/>
+		<param>max-age</param>
+		<alert>Incomplete or no cache-control and pragma HTTPHeader set</alert>
+		<evidence/>
+		<reliability>Warning</reliability>
+		<solution>Whenever possible ensure the cache-control HTTPHeader is set with no-cache, no-store, must-revalidate, private, and the pragma HTTPHeader is set with no-cache.</solution>
+		<url>http://site.com</url>
+		<reference>https://www.owasp.org/index.php/Session_Management_Cheat_Sheet#Web_Content_Caching</reference>
+		<id>199</id>
+		<risk>Low</risk>
+		<description>The cache-control and pragma HTTPHeader have not been set properly allowing the browser and proxies to cache content</description>
+		<attack>315360000</attack>
+		<messageId>186</messageId>
+		<cweid>0</cweid>
+		<wascid>0</wascid>
+	</alert>
+	<alert type="set">
+		<other/>
+		<param>public</param>
+		<alert>Incomplete or no cache-control and pragma HTTPHeader set</alert>
+		<evidence/>
+		<reliability>Warning</reliability>
+		<solution>Whenever possible ensure the cache-control HTTPHeader is set with no-cache, no-store, must-revalidate, private, and the pragma HTTPHeader is set with no-cache.</solution>
+		<url>http://site.com</url>
+		<reference>https://www.owasp.org/index.php/Session_Management_Cheat_Sheet#Web_Content_Caching</reference>
+		<id>200</id>
+		<risk>Low</risk>
+		<description>The cache-control and pragma HTTPHeader have not been set properly allowing the browser and proxies to cache content</description>
+		<attack/>
+		<messageId>186</messageId>
+		<cweid>0</cweid>
+		<wascid>0</wascid>
+	</alert>
+	<alert type="set">
+		<other/>
+		<param/>
+		<alert>X-Content-Type-Options header missing</alert>
+		<evidence/>
+		<reliability>Warning</reliability>
+		<solution>This check is specific to Internet Explorer 8 and Google Chrome. Ensure each page sets a Content-Type header and the X-CONTENT-TYPE-OPTIONS if the Content-Type header is unknown</solution>
+		<url>http://site.com</url>
+		<reference/>
+		<id>202</id>
+		<risk>Low</risk>
+		<description>The Anti-MIME-Sniffing header X-Content-Type-Options was not set to 'nosniff'</description>
+		<attack/>
+		<messageId>186</messageId>
+		<cweid>0</cweid>
+		<wascid>0</wascid>
+	</alert>
+	<alert type="set">
+		<other/>
+		<param/>
+		<alert>X-Frame-Options header not set</alert>
+		<evidence/>
+		<reliability>Warning</reliability>
+		<solution>Most modern Web browsers support the X-Frame-Options HTTP header, ensure it's set on all web pages returned by your site (if you expect the page to be framed only by pages on your server (e.g. it's part of a FRAMESET) then you'll want to use SAMEORIGIN,
+			otherwise if you never expect the page to be framed, you should use DENY).</solution>
+		<url>http://site.com</url>
+		<reference>http://blogs.msdn.com/b/ieinternals/archive/2010/03/30/combating-clickjacking-with-x-frame-options.aspx?Redirected=true</reference>
+		<id>203</id>
+		<risk>Informational</risk>
+		<description>X-Frame-Options header is not included in the HTTP response to protect against 'ClickJacking' attacks</description>
+		<attack/>
+		<messageId>186</messageId>
+		<cweid>0</cweid>
+		<wascid>0</wascid>
+	</alert>
+	<alert type="set">
+		<other/>
+		<param>max-age</param>
+		<alert>Incomplete or no cache-control and pragma HTTPHeader set</alert>
+		<evidence/>
+		<reliability>Warning</reliability>
+		<solution>Whenever possible ensure the cache-control HTTPHeader is set with no-cache, no-store, must-revalidate, private, and the pragma HTTPHeader is set with no-cache.</solution>
+		<url>http://site.com</url>
+		<reference>https://www.owasp.org/index.php/Session_Management_Cheat_Sheet#Web_Content_Caching</reference>
+		<id>204</id>
+		<risk>Low</risk>
+		<description>The cache-control and pragma HTTPHeader have not been set properly allowing the browser and proxies to cache content</description>
+		<attack>86400</attack>
+		<messageId>187</messageId>
+		<cweid>0</cweid>
+		<wascid>0</wascid>
+	</alert>
+	<alert type="set">
+		<other/>
+		<param/>
+		<alert>X-Content-Type-Options header missing</alert>
+		<evidence/>
+		<reliability>Warning</reliability>
+		<solution>This check is specific to Internet Explorer 8 and Google Chrome. Ensure each page sets a Content-Type header and the X-CONTENT-TYPE-OPTIONS if the Content-Type header is unknown</solution>
+		<url>http://site.com</url>
+		<reference/>
+		<id>205</id>
+		<risk>Low</risk>
+		<description>The Anti-MIME-Sniffing header X-Content-Type-Options was not set to 'nosniff'</description>
+		<attack/>
+		<messageId>187</messageId>
+		<cweid>0</cweid>
+		<wascid>0</wascid>
+	</alert>
+	<alert type="set">
+		<other/>
+		<param/>
+		<alert>X-Frame-Options header not set</alert>
+		<evidence/>
+		<reliability>Warning</reliability>
+		<solution>Most modern Web browsers support the X-Frame-Options HTTP header, ensure it's set on all web pages returned by your site (if you expect the page to be framed only by pages on your server (e.g. it's part of a FRAMESET) then you'll want to use SAMEORIGIN,
+			otherwise if you never expect the page to be framed, you should use DENY).</solution>
+		<url>http://site.com</url>
+		<reference>http://blogs.msdn.com/b/ieinternals/archive/2010/03/30/combating-clickjacking-with-x-frame-options.aspx?Redirected=true</reference>
+		<id>206</id>
+		<risk>Informational</risk>
+		<description>X-Frame-Options header is not included in the HTTP response to protect against 'ClickJacking' attacks</description>
+		<attack/>
+		<messageId>187</messageId>
+		<cweid>0</cweid>
+		<wascid>0</wascid>
+	</alert>
+	<alert type="set">
+		<other/>
+		<param>max-age</param>
+		<alert>Incomplete or no cache-control and pragma HTTPHeader set</alert>
+		<evidence/>
+		<reliability>Warning</reliability>
+		<solution>Whenever possible ensure the cache-control HTTPHeader is set with no-cache, no-store, must-revalidate, private, and the pragma HTTPHeader is set with no-cache.</solution>
+		<url>http://site.com</url>
+		<reference>https://www.owasp.org/index.php/Session_Management_Cheat_Sheet#Web_Content_Caching</reference>
+		<id>207</id>
+		<risk>Low</risk>
+		<description>The cache-control and pragma HTTPHeader have not been set properly allowing the browser and proxies to cache content</description>
+		<attack>315360000</attack>
+		<messageId>190</messageId>
+		<cweid>0</cweid>
+		<wascid>0</wascid>
+	</alert>
+	<alert type="set">
+		<other/>
+		<param>public</param>
+		<alert>Incomplete or no cache-control and pragma HTTPHeader set</alert>
+		<evidence/>
+		<reliability>Warning</reliability>
+		<solution>Whenever possible ensure the cache-control HTTPHeader is set with no-cache, no-store, must-revalidate, private, and the pragma HTTPHeader is set with no-cache.</solution>
+		<url>http://site.com</url>
+		<reference>https://www.owasp.org/index.php/Session_Management_Cheat_Sheet#Web_Content_Caching</reference>
+		<id>208</id>
+		<risk>Low</risk>
+		<description>The cache-control and pragma HTTPHeader have not been set properly allowing the browser and proxies to cache content</description>
+		<attack/>
+		<messageId>190</messageId>
+		<cweid>0</cweid>
+		<wascid>0</wascid>
+	</alert>
+	<alert type="set">
+		<other/>
+		<param/>
+		<alert>X-Content-Type-Options header missing</alert>
+		<evidence/>
+		<reliability>Warning</reliability>
+		<solution>This check is specific to Internet Explorer 8 and Google Chrome. Ensure each page sets a Content-Type header and the X-CONTENT-TYPE-OPTIONS if the Content-Type header is unknown</solution>
+		<url>http://site.com</url>
+		<reference/>
+		<id>210</id>
+		<risk>Low</risk>
+		<description>The Anti-MIME-Sniffing header X-Content-Type-Options was not set to 'nosniff'</description>
+		<attack/>
+		<messageId>190</messageId>
+		<cweid>0</cweid>
+		<wascid>0</wascid>
+	</alert>
+	<alert type="set">
+		<other/>
+		<param/>
+		<alert>X-Frame-Options header not set</alert>
+		<evidence/>
+		<reliability>Warning</reliability>
+		<solution>Most modern Web browsers support the X-Frame-Options HTTP header, ensure it's set on all web pages returned by your site (if you expect the page to be framed only by pages on your server (e.g. it's part of a FRAMESET) then you'll want to use SAMEORIGIN,
+			otherwise if you never expect the page to be framed, you should use DENY).</solution>
+		<url>http://site.com</url>
+		<reference>http://blogs.msdn.com/b/ieinternals/archive/2010/03/30/combating-clickjacking-with-x-frame-options.aspx?Redirected=true</reference>
+		<id>211</id>
+		<risk>Informational</risk>
+		<description>X-Frame-Options header is not included in the HTTP response to protect against 'ClickJacking' attacks</description>
+		<attack/>
+		<messageId>190</messageId>
+		<cweid>0</cweid>
+		<wascid>0</wascid>
+	</alert>
+	<alert type="set">
+		<other/>
+		<param>max-age</param>
+		<alert>Incomplete or no cache-control and pragma HTTPHeader set</alert>
+		<evidence/>
+		<reliability>Warning</reliability>
+		<solution>Whenever possible ensure the cache-control HTTPHeader is set with no-cache, no-store, must-revalidate, private, and the pragma HTTPHeader is set with no-cache.</solution>
+		<url>http://site.com</url>
+		<reference>https://www.owasp.org/index.php/Session_Management_Cheat_Sheet#Web_Content_Caching</reference>
+		<id>212</id>
+		<risk>Low</risk>
+		<description>The cache-control and pragma HTTPHeader have not been set properly allowing the browser and proxies to cache content</description>
+		<attack>315360000</attack>
+		<messageId>192</messageId>
+		<cweid>0</cweid>
+		<wascid>0</wascid>
+	</alert>
+	<alert type="set">
+		<other/>
+		<param>public</param>
+		<alert>Incomplete or no cache-control and pragma HTTPHeader set</alert>
+		<evidence/>
+		<reliability>Warning</reliability>
+		<solution>Whenever possible ensure the cache-control HTTPHeader is set with no-cache, no-store, must-revalidate, private, and the pragma HTTPHeader is set with no-cache.</solution>
+		<url>http://site.com</url>
+		<reference>https://www.owasp.org/index.php/Session_Management_Cheat_Sheet#Web_Content_Caching</reference>
+		<id>213</id>
+		<risk>Low</risk>
+		<description>The cache-control and pragma HTTPHeader have not been set properly allowing the browser and proxies to cache content</description>
+		<attack/>
+		<messageId>192</messageId>
+		<cweid>0</cweid>
+		<wascid>0</wascid>
+	</alert>
+	<alert type="set">
+		<other/>
+		<param/>
+		<alert>X-Content-Type-Options header missing</alert>
+		<evidence/>
+		<reliability>Warning</reliability>
+		<solution>This check is specific to Internet Explorer 8 and Google Chrome. Ensure each page sets a Content-Type header and the X-CONTENT-TYPE-OPTIONS if the Content-Type header is unknown</solution>
+		<url>http://site.com</url>
+		<reference/>
+		<id>215</id>
+		<risk>Low</risk>
+		<description>The Anti-MIME-Sniffing header X-Content-Type-Options was not set to 'nosniff'</description>
+		<attack/>
+		<messageId>192</messageId>
+		<cweid>0</cweid>
+		<wascid>0</wascid>
+	</alert>
+	<alert type="set">
+		<other/>
+		<param/>
+		<alert>X-Frame-Options header not set</alert>
+		<evidence/>
+		<reliability>Warning</reliability>
+		<solution>Most modern Web browsers support the X-Frame-Options HTTP header, ensure it's set on all web pages returned by your site (if you expect the page to be framed only by pages on your server (e.g. it's part of a FRAMESET) then you'll want to use SAMEORIGIN,
+			otherwise if you never expect the page to be framed, you should use DENY).</solution>
+		<url>http://site.com</url>
+		<reference>http://blogs.msdn.com/b/ieinternals/archive/2010/03/30/combating-clickjacking-with-x-frame-options.aspx?Redirected=true</reference>
+		<id>216</id>
+		<risk>Informational</risk>
+		<description>X-Frame-Options header is not included in the HTTP response to protect against 'ClickJacking' attacks</description>
+		<attack/>
+		<messageId>192</messageId>
+		<cweid>0</cweid>
+		<wascid>0</wascid>
+	</alert>
+	<alert type="set">
+		<other/>
+		<param>max-age</param>
+		<alert>Incomplete or no cache-control and pragma HTTPHeader set</alert>
+		<evidence/>
+		<reliability>Warning</reliability>
+		<solution>Whenever possible ensure the cache-control HTTPHeader is set with no-cache, no-store, must-revalidate, private, and the pragma HTTPHeader is set with no-cache.</solution>
+		<url>http://site.com</url>
+		<reference>https://www.owasp.org/index.php/Session_Management_Cheat_Sheet#Web_Content_Caching</reference>
+		<id>217</id>
+		<risk>Low</risk>
+		<description>The cache-control and pragma HTTPHeader have not been set properly allowing the browser and proxies to cache content</description>
+		<attack>86400</attack>
+		<messageId>194</messageId>
+		<cweid>0</cweid>
+		<wascid>0</wascid>
+	</alert>
+	<alert type="set">
+		<other/>
+		<param/>
+		<alert>X-Content-Type-Options header missing</alert>
+		<evidence/>
+		<reliability>Warning</reliability>
+		<solution>This check is specific to Internet Explorer 8 and Google Chrome. Ensure each page sets a Content-Type header and the X-CONTENT-TYPE-OPTIONS if the Content-Type header is unknown</solution>
+		<url>http://site.com</url>
+		<reference/>
+		<id>218</id>
+		<risk>Low</risk>
+		<description>The Anti-MIME-Sniffing header X-Content-Type-Options was not set to 'nosniff'</description>
+		<attack/>
+		<messageId>194</messageId>
+		<cweid>0</cweid>
+		<wascid>0</wascid>
+	</alert>
+	<alert type="set">
+		<other/>
+		<param/>
+		<alert>X-Frame-Options header not set</alert>
+		<evidence/>
+		<reliability>Warning</reliability>
+		<solution>Most modern Web browsers support the X-Frame-Options HTTP header, ensure it's set on all web pages returned by your site (if you expect the page to be framed only by pages on your server (e.g. it's part of a FRAMESET) then you'll want to use SAMEORIGIN,
+			otherwise if you never expect the page to be framed, you should use DENY).</solution>
+		<url>http://site.com</url>
+		<reference>http://blogs.msdn.com/b/ieinternals/archive/2010/03/30/combating-clickjacking-with-x-frame-options.aspx?Redirected=true</reference>
+		<id>219</id>
+		<risk>Informational</risk>
+		<description>X-Frame-Options header is not included in the HTTP response to protect against 'ClickJacking' attacks</description>
+		<attack/>
+		<messageId>194</messageId>
+		<cweid>0</cweid>
+		<wascid>0</wascid>
+	</alert>
+	<alert type="set">
+		<other/>
+		<param>public, max-age</param>
+		<alert>Incomplete or no cache-control and pragma HTTPHeader set</alert>
+		<evidence/>
+		<reliability>Warning</reliability>
+		<solution>Whenever possible ensure the cache-control HTTPHeader is set with no-cache, no-store, must-revalidate, private, and the pragma HTTPHeader is set with no-cache.</solution>
+		<url>https://connect.facebook.net/en_US/all.js</url>
+		<reference>https://www.owasp.org/index.php/Session_Management_Cheat_Sheet#Web_Content_Caching</reference>
+		<id>220</id>
+		<risk>Low</risk>
+		<description>The cache-control and pragma HTTPHeader have not been set properly allowing the browser and proxies to cache content</description>
+		<attack>1200</attack>
+		<messageId>196</messageId>
+		<cweid>0</cweid>
+		<wascid>0</wascid>
+	</alert>
+	<alert type="set">
+		<other/>
+		<param/>
+		<alert>X-Content-Type-Options header missing</alert>
+		<evidence/>
+		<reliability>Warning</reliability>
+		<solution>This check is specific to Internet Explorer 8 and Google Chrome. Ensure each page sets a Content-Type header and the X-CONTENT-TYPE-OPTIONS if the Content-Type header is unknown</solution>
+		<url>https://connect.facebook.net/en_US/all.js</url>
+		<reference/>
+		<id>221</id>
+		<risk>Low</risk>
+		<description>The Anti-MIME-Sniffing header X-Content-Type-Options was not set to 'nosniff'</description>
+		<attack/>
+		<messageId>196</messageId>
+		<cweid>0</cweid>
+		<wascid>0</wascid>
+	</alert>
+	<alert type="set">
+		<other/>
+		<param/>
+		<alert>X-Frame-Options header not set</alert>
+		<evidence/>
+		<reliability>Warning</reliability>
+		<solution>Most modern Web browsers support the X-Frame-Options HTTP header, ensure it's set on all web pages returned by your site (if you expect the page to be framed only by pages on your server (e.g. it's part of a FRAMESET) then you'll want to use SAMEORIGIN,
+			otherwise if you never expect the page to be framed, you should use DENY).</solution>
+		<url>https://connect.facebook.net/en_US/all.js</url>
+		<reference>http://blogs.msdn.com/b/ieinternals/archive/2010/03/30/combating-clickjacking-with-x-frame-options.aspx?Redirected=true</reference>
+		<id>222</id>
+		<risk>Informational</risk>
+		<description>X-Frame-Options header is not included in the HTTP response to protect against 'ClickJacking' attacks</description>
+		<attack/>
+		<messageId>196</messageId>
+		<cweid>0</cweid>
+		<wascid>0</wascid>
+	</alert>
+	<alert type="set">
+		<other/>
+		<param>max-age</param>
+		<alert>Incomplete or no cache-control and pragma HTTPHeader set</alert>
+		<evidence/>
+		<reliability>Warning</reliability>
+		<solution>Whenever possible ensure the cache-control HTTPHeader is set with no-cache, no-store, must-revalidate, private, and the pragma HTTPHeader is set with no-cache.</solution>
+		<url>https://vk.com/js/api/openapi.js?76&amp;_=1386669971850</url>
+		<reference>https://www.owasp.org/index.php/Session_Management_Cheat_Sheet#Web_Content_Caching</reference>
+		<id>223</id>
+		<risk>Low</risk>
+		<description>The cache-control and pragma HTTPHeader have not been set properly allowing the browser and proxies to cache content</description>
+		<attack>345600</attack>
+		<messageId>197</messageId>
+		<cweid>0</cweid>
+		<wascid>0</wascid>
+	</alert>
+	<alert type="set">
+		<other/>
+		<param/>
+		<alert>X-Content-Type-Options header missing</alert>
+		<evidence/>
+		<reliability>Warning</reliability>
+		<solution>This check is specific to Internet Explorer 8 and Google Chrome. Ensure each page sets a Content-Type header and the X-CONTENT-TYPE-OPTIONS if the Content-Type header is unknown</solution>
+		<url>https://vk.com/js/api/openapi.js?76&amp;_=1386669971850</url>
+		<reference/>
+		<id>224</id>
+		<risk>Low</risk>
+		<description>The Anti-MIME-Sniffing header X-Content-Type-Options was not set to 'nosniff'</description>
+		<attack/>
+		<messageId>197</messageId>
+		<cweid>0</cweid>
+		<wascid>0</wascid>
+	</alert>
+	<alert type="set">
+		<other/>
+		<param/>
+		<alert>X-Frame-Options header not set</alert>
+		<evidence/>
+		<reliability>Warning</reliability>
+		<solution>Most modern Web browsers support the X-Frame-Options HTTP header, ensure it's set on all web pages returned by your site (if you expect the page to be framed only by pages on your server (e.g. it's part of a FRAMESET) then you'll want to use SAMEORIGIN,
+			otherwise if you never expect the page to be framed, you should use DENY).</solution>
+		<url>https://vk.com/js/api/openapi.js?76&amp;_=1386669971850</url>
+		<reference>http://blogs.msdn.com/b/ieinternals/archive/2010/03/30/combating-clickjacking-with-x-frame-options.aspx?Redirected=true</reference>
+		<id>225</id>
+		<risk>Informational</risk>
+		<description>X-Frame-Options header is not included in the HTTP response to protect against 'ClickJacking' attacks</description>
+		<attack/>
+		<messageId>197</messageId>
+		<cweid>0</cweid>
+		<wascid>0</wascid>
+	</alert>
+	<alert type="set">
+		<other/>
+		<param>max-age</param>
+		<alert>Incomplete or no cache-control and pragma HTTPHeader set</alert>
+		<evidence/>
+		<reliability>Warning</reliability>
+		<solution>Whenever possible ensure the cache-control HTTPHeader is set with no-cache, no-store, must-revalidate, private, and the pragma HTTPHeader is set with no-cache.</solution>
+		<url>http://site.com</url>
+		<reference>https://www.owasp.org/index.php/Session_Management_Cheat_Sheet#Web_Content_Caching</reference>
+		<id>226</id>
+		<risk>Low</risk>
+		<description>The cache-control and pragma HTTPHeader have not been set properly allowing the browser and proxies to cache content</description>
+		<attack>315360000</attack>
+		<messageId>198</messageId>
+		<cweid>0</cweid>
+		<wascid>0</wascid>
+	</alert>
+	<alert type="set">
+		<other/>
+		<param>public</param>
+		<alert>Incomplete or no cache-control and pragma HTTPHeader set</alert>
+		<evidence/>
+		<reliability>Warning</reliability>
+		<solution>Whenever possible ensure the cache-control HTTPHeader is set with no-cache, no-store, must-revalidate, private, and the pragma HTTPHeader is set with no-cache.</solution>
+		<url>http://site.com</url>
+		<reference>https://www.owasp.org/index.php/Session_Management_Cheat_Sheet#Web_Content_Caching</reference>
+		<id>227</id>
+		<risk>Low</risk>
+		<description>The cache-control and pragma HTTPHeader have not been set properly allowing the browser and proxies to cache content</description>
+		<attack/>
+		<messageId>198</messageId>
+		<cweid>0</cweid>
+		<wascid>0</wascid>
+	</alert>
+	<alert type="set">
+		<other/>
+		<param/>
+		<alert>X-Content-Type-Options header missing</alert>
+		<evidence/>
+		<reliability>Warning</reliability>
+		<solution>This check is specific to Internet Explorer 8 and Google Chrome. Ensure each page sets a Content-Type header and the X-CONTENT-TYPE-OPTIONS if the Content-Type header is unknown</solution>
+		<url>http://site.com</url>
+		<reference/>
+		<id>229</id>
+		<risk>Low</risk>
+		<description>The Anti-MIME-Sniffing header X-Content-Type-Options was not set to 'nosniff'</description>
+		<attack/>
+		<messageId>198</messageId>
+		<cweid>0</cweid>
+		<wascid>0</wascid>
+	</alert>
+	<alert type="set">
+		<other/>
+		<param/>
+		<alert>X-Frame-Options header not set</alert>
+		<evidence/>
+		<reliability>Warning</reliability>
+		<solution>Most modern Web browsers support the X-Frame-Options HTTP header, ensure it's set on all web pages returned by your site (if you expect the page to be framed only by pages on your server (e.g. it's part of a FRAMESET) then you'll want to use SAMEORIGIN,
+			otherwise if you never expect the page to be framed, you should use DENY).</solution>
+		<url>http://site.com</url>
+		<reference>http://blogs.msdn.com/b/ieinternals/archive/2010/03/30/combating-clickjacking-with-x-frame-options.aspx?Redirected=true</reference>
+		<id>230</id>
+		<risk>Informational</risk>
+		<description>X-Frame-Options header is not included in the HTTP response to protect against 'ClickJacking' attacks</description>
+		<attack/>
+		<messageId>198</messageId>
+		<cweid>0</cweid>
+		<wascid>0</wascid>
+	</alert>
+	<alert type="set">
+		<other/>
+		<param>max-age</param>
+		<alert>Incomplete or no cache-control and pragma HTTPHeader set</alert>
+		<evidence/>
+		<reliability>Warning</reliability>
+		<solution>Whenever possible ensure the cache-control HTTPHeader is set with no-cache, no-store, must-revalidate, private, and the pragma HTTPHeader is set with no-cache.</solution>
+		<url>http://site.com</url>
+		<reference>https://www.owasp.org/index.php/Session_Management_Cheat_Sheet#Web_Content_Caching</reference>
+		<id>231</id>
+		<risk>Low</risk>
+		<description>The cache-control and pragma HTTPHeader have not been set properly allowing the browser and proxies to cache content</description>
+		<attack>315360000</attack>
+		<messageId>199</messageId>
+		<cweid>0</cweid>
+		<wascid>0</wascid>
+	</alert>
+</alerts>
