@@ -1,6 +1,10 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns="http://www.w3.org/1999/xhtml">
 	<xsl:output method="xml" indent="yes" encoding="UTF-8" />
+
+	<xsl:key name="risk" match="alert" use="risk" />
+	<xsl:key name="alert" match="alert" use="alert" />
+
 	<xsl:template match="/alerts">
 		<html>
 			<head>
@@ -57,6 +61,7 @@
 						border-spacing: 0;
 					}
 
+					/* Main styles */
 					.bReport {
 						font: 12px Arial, sans-serif;
 						padding: 20px;
@@ -78,14 +83,17 @@
 
 					.bReport__eTable__mInner .bReport__eTable__eItem {
 						border: none;
+					}
+
+					.bReport__eTable__mInner .bReport__eTable__eItems:nth-child(odd) .bReport__eTable__eItem {
+						background-color: #f9f9f9;
+					}
+
+					.bReport__eTable__mInner .bReport__eTable__eItems__mLast .bReport__eTable__eItem {
 						border-bottom: 1px #ddd solid;
 					}
 
-					.bReport__eTable__eItems {
-
-					}
-
-					.bReport__eTable__eItems__mLevelInfo .bReport__eTable__eItem__mRisk {
+					.bReport__eTable__eItems__mLevelInformational .bReport__eTable__eItem__mRisk {
 						color: #31708f;
 						background: #d9edf7;
 					}
@@ -121,11 +129,12 @@
 
 					.bReport__eTable__eItem__mHead {
 						font-size: 18px;
+						border-bottom-width: 2px;
 					}
 
 					.bReport__eTable__eItem__mRisk {
 						text-align: center;
-						vertical-align: middle;
+						vertical-align: top;
 					}
 
 					.bReport__eTable__eItem__mUrl,
@@ -140,10 +149,28 @@
 
 					.bReport__eTable__eItem__mAlert {
 						font-size: 16px;
+						vertical-align: top;
 					}
 
-					.bReport__eTable__eItem__mDesc {
+					.bReport__eTable__eItem__eDesc {
+						font-size: 12px;
 						color: #666;
+						border-top: 1px #ddd solid;
+						margin: 10px 0 0;
+						padding: 10px 0;
+					}
+
+					.bReport__eTable__eItem__eAdditionalInfo {
+						margin-top: 10px;
+					}
+
+					.bReport__eTable__eItem__eCode {
+						padding: 2px 4px;
+						font-size: 90%;
+						color: #c7254e;
+						word-break: break-all;
+						background-color: #f9f2f4;
+						border-radius: 4px;
 					}
 				</style>
 			</head>
@@ -154,23 +181,12 @@
 						<thead>
 							<tr>
 								<th class="bReport__eTable__eItem bReport__eTable__eItem__mHead">Risk</th>
-								<th class="bReport__eTable__eItem bReport__eTable__eItem__mHead">URL</th>
 								<th class="bReport__eTable__eItem bReport__eTable__eItem__mHead">Alert</th>
+								<th class="bReport__eTable__eItem bReport__eTable__eItem__mHead">URL</th>
 							</tr>
 						</thead>
 						<tbody>
-							<xsl:apply-templates select="alert[starts-with(risk, 'High')]">
-								<xsl:sort select="alert" />
-							</xsl:apply-templates>
-							<xsl:apply-templates select="alert[starts-with(risk, 'Medium')]">
-								<xsl:sort select="alert" />
-							</xsl:apply-templates>
-							<xsl:apply-templates select="alert[starts-with(risk, 'Low')]">
-								<xsl:sort select="alert" />
-							</xsl:apply-templates>
-							<xsl:apply-templates select="alert[starts-with(risk, 'Informational')]">
-								<xsl:sort select="alert" />
-							</xsl:apply-templates>
+							<xsl:apply-templates select="alert[generate-id(.)=generate-id(key('alert',alert)[1])]"/>
 						</tbody>
 					</table>
 				</div>
@@ -183,49 +199,36 @@
 			<xsl:attribute name="class">
 				<xsl:text>bReport__eTable__eItems</xsl:text>
 				<xsl:text> bReport__eTable__eItems__mLevel</xsl:text>
-				<xsl:if test="risk = 'Low'">
-					<xsl:text>Low</xsl:text>
-				</xsl:if>
-				<xsl:if test="risk = 'Informational'">
-					<xsl:text>Info</xsl:text>
-				</xsl:if>
-				<xsl:if test="risk = 'Medium'">
-					<xsl:text>Medium</xsl:text>
-				</xsl:if>
-				<xsl:if test="risk = 'High'">
-					<xsl:text>High</xsl:text>
-				</xsl:if>
+				<xsl:value-of select="risk" />
 			</xsl:attribute>
 			<td class="bReport__eTable__eItem bReport__eTable__eItem__mRisk">
 				<xsl:value-of select="risk" />
 			</td>
-			<td class="bReport__eTable__eItem bReport__eTable__eItem__mUrl">
-				<xsl:value-of select="url" />
+			<td class="bReport__eTable__eItem bReport__eTable__eItem__mAlert">
+				<xsl:value-of select="alert" />
+				<p class="bReport__eTable__eItem__eDesc">
+					<xsl:value-of select="description" />
+				</p>
 			</td>
 			<td class="bReport__eTable__eItem bReport__eTable__eItem__mComposite">
 				<table class="bReport__eTable bReport__eTable__mInner">
-					<tr>
-						<td class="bReport__eTable__eItem bReport__eTable__eItem__mAlert">
-							<xsl:value-of select="alert" />
-						</td>
-					</tr>
-					<tr>
-						<td>
-							<xsl:attribute name="class">
-								<xsl:text>bReport__eTable__eItem</xsl:text>
-								<xsl:text> bReport__eTable__eItem__mDesc</xsl:text>
-								<xsl:if test="attack = ''"> bReport__eTable__eItem__mLast</xsl:if>
-							</xsl:attribute>
-							<xsl:value-of select="description" />
-						</td>
-					</tr>
-					<xsl:if test="attack != ''">
-						<tr>
-							<td class="bReport__eTable__eItem bReport__eTable__eItem__mAttack bReport__eTable__eItem__mLast">
-								<xsl:value-of select="attack" />
+					<xsl:for-each select="key('alert', alert)">
+						<tr class="bReport__eTable__eItems bReport__eTable__eItems__mLast">
+							<td class="bReport__eTable__eItem bReport__eTable__eItem__mUrl">
+								<xsl:value-of select="url" />
+								<xsl:if test="attack != ''">
+									<p class="bReport__eTable__eItem__eAdditionalInfo">
+										<span class="bReport__eTable__eItem__eCode">
+											<xsl:value-of select="attack" />
+										</span>
+									</p>
+								</xsl:if>
 							</td>
 						</tr>
-					</xsl:if>
+					</xsl:for-each>
+					<tr class="bReport__eTable__eItems">
+						<td class="bReport__eTable__eItem"></td>
+					</tr>
 				</table>
 			</td>
 		</tr>
