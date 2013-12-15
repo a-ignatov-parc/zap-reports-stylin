@@ -93,6 +93,11 @@
 						border-bottom: 1px #ddd solid;
 					}
 
+					.bReport__eTable__mInner .bReport__eTable__eItems__mEnd .bReport__eTable__eItem {
+						border-bottom: none;
+						background: none !important;
+					}
+
 					.bReport__eTable__eItems__mLevelInformational .bReport__eTable__eItem__mRisk {
 						color: #31708f;
 						background: #d9edf7;
@@ -186,7 +191,10 @@
 							</tr>
 						</thead>
 						<tbody>
-							<xsl:apply-templates select="alert[generate-id(.)=generate-id(key('alert',alert)[1])]"/>
+							<xsl:apply-templates select="alert[generate-id(.)=generate-id(key('alert',alert)[1]) and starts-with(risk, 'High')]"/>
+							<xsl:apply-templates select="alert[generate-id(.)=generate-id(key('alert',alert)[1]) and starts-with(risk, 'Medium')]"/>
+							<xsl:apply-templates select="alert[generate-id(.)=generate-id(key('alert',alert)[1]) and starts-with(risk, 'Low')]"/>
+							<xsl:apply-templates select="alert[generate-id(.)=generate-id(key('alert',alert)[1]) and starts-with(risk, 'Informational')]"/>
 						</tbody>
 					</table>
 				</div>
@@ -226,7 +234,7 @@
 							</td>
 						</tr>
 					</xsl:for-each>
-					<tr class="bReport__eTable__eItems">
+					<tr class="bReport__eTable__eItems bReport__eTable__eItems__mEnd">
 						<td class="bReport__eTable__eItem"></td>
 					</tr>
 				</table>

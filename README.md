@@ -11,4 +11,4 @@ Transform ZAP xml reports from this
 
 to this
 
-![](https://dl.dropboxusercontent.com/spa/vgkinc546lpphsd/3x455xvq.png)
+![](https://dl.dropboxusercontent.com/spa/vgkinc546lpphsd/4ybb_xw9.png)
