@@ -181,7 +181,20 @@
 	<xsl:template match="alert">
 		<tr>
 			<xsl:attribute name="class">
-				bReport__eTable__eItems bReport__eTable__eItems__mLevel<xsl:if test="risk = 'Low'">Low</xsl:if><xsl:if test="risk = 'Informational'">Info</xsl:if><xsl:if test="risk = 'Medium'">Medium</xsl:if><xsl:if test="risk = 'High'">High</xsl:if>
+				<xsl:text>bReport__eTable__eItems</xsl:text>
+				<xsl:text> bReport__eTable__eItems__mLevel</xsl:text>
+				<xsl:if test="risk = 'Low'">
+					<xsl:text>Low</xsl:text>
+				</xsl:if>
+				<xsl:if test="risk = 'Informational'">
+					<xsl:text>Info</xsl:text>
+				</xsl:if>
+				<xsl:if test="risk = 'Medium'">
+					<xsl:text>Medium</xsl:text>
+				</xsl:if>
+				<xsl:if test="risk = 'High'">
+					<xsl:text>High</xsl:text>
+				</xsl:if>
 			</xsl:attribute>
 			<td class="bReport__eTable__eItem bReport__eTable__eItem__mRisk">
 				<xsl:value-of select="risk" />
@@ -199,8 +212,9 @@
 					<tr>
 						<td>
 							<xsl:attribute name="class">
-								bReport__eTable__eItem bReport__eTable__eItem__mDesc
-								<xsl:if test="attack = ''">bReport__eTable__eItem__mLast</xsl:if>
+								<xsl:text>bReport__eTable__eItem</xsl:text>
+								<xsl:text> bReport__eTable__eItem__mDesc</xsl:text>
+								<xsl:if test="attack = ''"> bReport__eTable__eItem__mLast</xsl:if>
 							</xsl:attribute>
 							<xsl:value-of select="description" />
 						</td>
