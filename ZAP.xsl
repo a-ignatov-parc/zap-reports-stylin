@@ -177,6 +177,10 @@
 						background-color: #f9f2f4;
 						border-radius: 4px;
 					}
+
+					.bReport__eTable__eItem__eCode__mBadge {
+						background-color: #faebcc;
+					}
 				</style>
 			</head>
 			<body>
@@ -223,10 +227,22 @@
 					<xsl:for-each select="key('alert', alert)">
 						<tr class="bReport__eTable__eItems bReport__eTable__eItems__mLast">
 							<td class="bReport__eTable__eItem bReport__eTable__eItem__mUrl">
-								<xsl:value-of select="url" />
+								<xsl:if test="evidence != ''">
+									<xsl:value-of select="url" />
+									<p class="bReport__eTable__eItem__eAdditionalInfo">
+										<span title="evidence" class="bReport__eTable__eItem__eCode bReport__eTable__eItem__eCode__mBadge">
+											<xsl:value-of select="evidence" />
+										</span>
+									</p>
+								</xsl:if>
+								<xsl:if test="evidence = ''">
+									<xsl:value-of select="url" />
+								</xsl:if>
 								<xsl:if test="attack != ''">
 									<p class="bReport__eTable__eItem__eAdditionalInfo">
-										<span class="bReport__eTable__eItem__eCode">
+										<span title="attack" class="bReport__eTable__eItem__eCode">
+											<xsl:value-of select="param" />
+											<xsl:text>: </xsl:text>
 											<xsl:value-of select="attack" />
 										</span>
 									</p>
