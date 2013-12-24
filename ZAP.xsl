@@ -181,7 +181,78 @@
 					.bReport__eTable__eItem__eCode__mBadge {
 						background-color: #faebcc;
 					}
+
+					.bReport__eTable__eButton {
+						font-size: 12px;
+						color: #fff;
+						line-height: 1.5;
+						text-align: center;
+						white-space: nowrap;
+						vertical-align: middle;
+						border: 1px solid #357ebd;
+						border-radius: 3px;
+						background-color: #428bca;
+						-webkit-user-select: none;
+						-moz-user-select: none;
+						-ms-user-select: none;
+						-o-user-select: none;
+						user-select: none;
+						padding: 1px 5px;
+						cursor: pointer;
+						display: inline-block;
+					}
+
+					.bReport__eTable__eButton:hover {
+						color: #fff;
+						background-color: #3276b1;
+						border-color: #285e8e;
+					}
+
+					.bReport__eTable__eButton__mCollapse {
+						margin-top: 10px;
+						display: none;
+					}
+
+					.bReport__eTable__eItems__mCollapsible .bReport__eTable__eButton__mCollapse {
+						display: inline-block;
+					}
+
+					.bReport__eTable__eButton__eText__mExpand,
+					.bReport__eTable__eItems__mCollapse .bReport__eTable__eButton__eText__mCollapse,
+					.bReport__eTable__eItems__mCollapse .bReport__eTable__mInner .bReport__eTable__eItems__mLast {
+						display: none;
+					}
+
+					.bReport__eTable__eButton__eText__mCollapse,
+					.bReport__eTable__eItems__mCollapse .bReport__eTable__eButton__eText__mExpand {
+						display: inline;
+					}
+
+					.bReport__eTable__eItems__mCollapse .bReport__eTable__mInner .bReport__eTable__eItems__mLast:first-child {
+						display: table-row;
+					}
 				</style>
+				<script src="http://code.jquery.com/jquery-2.0.3.min.js" type="text/javascript"></script>
+				<script type="text/javascript">
+					$(function() {
+						$('.bReport__eTable__mInner').each(function(i, item) {
+							var list = $(item);
+
+							list
+								.closest('.bReport__eTable__eItems__mParent')
+								.toggleClass('bReport__eTable__eItems__mCollapsible', list.children().length > 2);
+						});
+
+						$('.bReport__eTable__eItems__mCollapsible .bReport__eTable__eButton')
+							.on('click', function(event) {
+								$(event.currentTarget)
+									.closest('.bReport__eTable__eItems__mParent')
+									.toggleClass('bReport__eTable__eItems__mCollapse');
+							})
+							.closest('.bReport__eTable__eItems__mParent')
+							.addClass('bReport__eTable__eItems__mCollapse');
+					});
+				</script>
 			</head>
 			<body>
 				<div class="bReport">
@@ -210,11 +281,16 @@
 		<tr>
 			<xsl:attribute name="class">
 				<xsl:text>bReport__eTable__eItems</xsl:text>
+				<xsl:text> bReport__eTable__eItems__mParent</xsl:text>
 				<xsl:text> bReport__eTable__eItems__mLevel</xsl:text>
 				<xsl:value-of select="risk" />
 			</xsl:attribute>
 			<td class="bReport__eTable__eItem bReport__eTable__eItem__mRisk">
 				<xsl:value-of select="risk" />
+				<button type="button" class="bReport__eTable__eButton bReport__eTable__eButton__mCollapse">
+					<span class="bReport__eTable__eButton__eText bReport__eTable__eButton__eText__mExpand">Expand</span>
+					<span class="bReport__eTable__eButton__eText bReport__eTable__eButton__eText__mCollapse">Collapse</span>
+				</button>
 			</td>
 			<td class="bReport__eTable__eItem bReport__eTable__eItem__mAlert">
 				<xsl:value-of select="alert" />
@@ -251,7 +327,12 @@
 						</tr>
 					</xsl:for-each>
 					<tr class="bReport__eTable__eItems bReport__eTable__eItems__mEnd">
-						<td class="bReport__eTable__eItem"></td>
+						<td class="bReport__eTable__eItem">
+							<button type="button" class="bReport__eTable__eButton bReport__eTable__eButton__mCollapse">
+								<span class="bReport__eTable__eButton__eText bReport__eTable__eButton__eText__mExpand">Expand URLs List</span>
+								<span class="bReport__eTable__eButton__eText bReport__eTable__eButton__eText__mCollapse">Collapse URLs List</span>
+							</button>
+						</td>
 					</tr>
 				</table>
 			</td>
