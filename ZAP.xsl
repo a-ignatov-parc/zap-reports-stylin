@@ -232,26 +232,28 @@
 						display: table-row;
 					}
 				</style>
-				<script src="http://code.jquery.com/jquery-2.0.3.min.js" type="text/javascript"></script>
+				<script src="//code.jquery.com/jquery-2.0.3.min.js" type="text/javascript"></script>
 				<script type="text/javascript">
-					$(function() {
-						$('.bReport__eTable__mInner').each(function(i, item) {
-							var list = $(item);
+					<xsl:text>
+						$(function() {
+							$('.bReport__eTable__mInner').each(function(i, item) {
+								var list = $(item);
 
-							list
-								.closest('.bReport__eTable__eItems__mParent')
-								.toggleClass('bReport__eTable__eItems__mCollapsible', list.children().length > 2);
-						});
-
-						$('.bReport__eTable__eItems__mCollapsible .bReport__eTable__eButton')
-							.on('click', function(event) {
-								$(event.currentTarget)
+								list
 									.closest('.bReport__eTable__eItems__mParent')
-									.toggleClass('bReport__eTable__eItems__mCollapse');
-							})
-							.closest('.bReport__eTable__eItems__mParent')
-							.addClass('bReport__eTable__eItems__mCollapse');
-					});
+									.toggleClass('bReport__eTable__eItems__mCollapsible', list.children().length > 2);
+							});
+
+							$('.bReport__eTable__eItems__mCollapsible .bReport__eTable__eButton')
+								.on('click', function(event) {
+									$(event.currentTarget)
+										.closest('.bReport__eTable__eItems__mParent')
+										.toggleClass('bReport__eTable__eItems__mCollapse');
+								})
+								.closest('.bReport__eTable__eItems__mParent')
+								.addClass('bReport__eTable__eItems__mCollapse');
+						});
+					</xsl:text>
 				</script>
 			</head>
 			<body>
