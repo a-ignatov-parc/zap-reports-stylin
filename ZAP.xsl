@@ -290,7 +290,9 @@
 				<xsl:value-of select="risk" />
 			</xsl:attribute>
 			<td class="bReport__eTable__eItem bReport__eTable__eItem__mRisk">
-				<xsl:value-of select="risk" />
+				<div>
+					<xsl:value-of select="risk" />
+				</div>
 				<button type="button" class="bReport__eTable__eButton bReport__eTable__eButton__mCollapse">
 					<span class="bReport__eTable__eButton__eText bReport__eTable__eButton__eText__mExpand">Expand</span>
 					<span class="bReport__eTable__eButton__eText bReport__eTable__eButton__eText__mCollapse">Collapse</span>
